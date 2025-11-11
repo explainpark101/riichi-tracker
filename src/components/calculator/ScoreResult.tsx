@@ -48,11 +48,11 @@ function ScoreResultSheet({
 					<div>
 						{result.yakuman ? (
 							<span className="text-4xl">
-								<H>Yakuman</H>
+								<H>역만</H>
 							</span>
 						) : (
 							<span className="text-4xl">
-								<H>{result.han}</H> Han <H>{result.fu}</H> Fu
+								<H>{result.han}</H> 판 <H>{result.fu}</H> 부
 							</span>
 						)}
 					</div>
@@ -69,7 +69,7 @@ function ScoreResultSheet({
 									</span>
 								) : (
 									<span className="text-sm sm:text-lg md:text-xl lg:text-2xl">
-										<H>{y[1]}</H> Han
+										<H>{y[1]}</H> 판
 									</span>
 								)}
 							</li>
@@ -86,7 +86,7 @@ function ScoreResultSheet({
 								)}
 								onClick={onTransferClick}
 							>
-								Transfer Calculated Score
+								점수 이동
 							</button>
 						</div>
 					)}

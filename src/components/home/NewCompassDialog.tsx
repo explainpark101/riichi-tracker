@@ -11,6 +11,7 @@ import ToggleOnOff from '../ToggleOnOff';
 import WindSelect from '../calculator/WindSelect';
 import CustomDialog from '../layout/CustomDialog';
 import SettingsDialog from '../settings/SettingsDialog';
+import { processResult } from "immer/dist/internal.js";
 
 export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 	const navigate = useNavigate();
@@ -19,7 +20,7 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 	const [openedSettings, setOpenedSettings] = useState(false);
 	const [newCompassInitialScore, setNewCompassInitialScore] = useState(25000);
 	const [newCompassBottomWind, setNewCompassBottomWind] = useState<Wind>('1');
-	const [newCompassSettings, setNewCompassSettings] = useState(DefaultSettings);
+	const [newCompassSettings, setNewCompassSettings] = useState({ ...DefaultSettings, usePao: true });
 	const initialScoreInputRef = useRef<HTMLInputElement | null>(null);
 
 	const [prefersQuick, setPrefersQuick] = useLocalStorage('prefersQuick');
@@ -38,6 +39,10 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 		const state: CompassState = { t: 'load', id: '$tools' };
 		navigate('/compass', { state, replace: true });
 	};
+
+	if (prefersQuick == null) {
+		setPrefersQuick('true');
+	}
 
 	return (
 		<CustomDialog initialFocus={initialScoreInputRef} onClose={onClose} title="New Game">
@@ -73,7 +78,7 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 							onChange={(w) => setNewCompassBottomWind(w)}
 						/>
 					</div>
-					<ToggleOnOff toggled={prefersQuick != null} onToggle={() => setPrefersQuick(prefersQuick ? null : 'true')}>
+					<ToggleOnOff toggled={prefersQuick == null ? true : prefersQuick === 'true'} onToggle={() => setPrefersQuick(prefersQuick === 'true' ? null : 'true')}>
 						점수 판·부수로 입력하기
 					</ToggleOnOff>
 					<ToggleOnOff toggled={openedSettings} onToggle={() => setOpenedSettings(true)}>
