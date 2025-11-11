@@ -1,7 +1,7 @@
 /* eslint-disable no-negated-condition */
 
 import clsx from 'clsx';
-import { ReactNode } from 'react';
+import { Fragment, ReactNode } from 'react';
 
 export default function ToggleThree({
 	toggled,

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import produce from 'immer';
-import { ReactNode, useState } from 'react';
+import { Fragment, ReactNode, useState } from 'react';
 import { DraftFunction } from 'use-immer';
 import YakuDialog from './YakuDialog';
 import { ScoreSettings } from '../../lib/settings';

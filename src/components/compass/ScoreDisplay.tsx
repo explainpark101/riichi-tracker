@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { Wind } from '../../lib/hand';
 import TileButton from '../calculator/TileButton';
 import H from '../text/H';
