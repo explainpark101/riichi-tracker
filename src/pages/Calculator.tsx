@@ -606,7 +606,7 @@ function CalculatorWithGame({
 											right="론"
 										/>
 									</div>
-									<HanFu han={han} fu={fu} agari={hand.agari} onHanChange={setHan} onFuChange={setFu} />
+									<HanFu han={han > 13 ? (han === 13*2 ? '더블역만' : han === 13*3 ? '트리플역만' : `${Math.floor(han / 13)}배역만`) : han} fu={fu} agari={hand.agari} onHanChange={setHan} onFuChange={setFu} />
 									<PointsResult
 										result={{
 											...hanFuScores,

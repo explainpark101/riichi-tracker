@@ -166,8 +166,10 @@ export function calculateHanFu(
 ): { tsumoAsFromOya: number; tsumoAsKo: number; ronAsOya: number; ronAsKo: number } {
 	let base = fu * Math.pow(2, han + 2);
 	if (settings.kiriageMangan ? base >= 1920 : base > 2000) {
-		if (settings.kazoeYakuman && han >= 13) {
-			base = 8000;
+		if (han >= 13) {
+			// n배역만: 13판 이상일 때 n배만큼 곱함 (13판=1배, 26판=2배, 39판=3배 등)
+			const yakumanMultiplier = Math.floor(han / 13);
+			base = 8000 * yakumanMultiplier;
 		} else if (han >= 11) {
 			base = 6000;
 		} else if (han >= 8) {

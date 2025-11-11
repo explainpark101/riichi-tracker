@@ -49,7 +49,7 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 						void submitNewCompass();
 					}}
 				>
-					<p className="text-xl lg:text-2xl">Initial Score</p>
+					<p className="text-xl lg:text-2xl">초기 점수</p>
 					<input
 						ref={initialScoreInputRef}
 						key="scoreInput"
@@ -64,7 +64,7 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 							}
 						}}
 					/>
-					<p className="text-xl lg:text-2xl">Your Seat Wind</p>
+					<p className="text-xl lg:text-2xl">자풍패</p>
 					<div>
 						<WindSelect
 							value={newCompassBottomWind}
@@ -74,10 +74,10 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 						/>
 					</div>
 					<ToggleOnOff toggled={prefersQuick != null} onToggle={() => setPrefersQuick(prefersQuick ? null : 'true')}>
-						Prefer Han &amp; Fu Input
+						점수 판·부수로 입력하기
 					</ToggleOnOff>
 					<ToggleOnOff toggled={openedSettings} onToggle={() => setOpenedSettings(true)}>
-						Settings
+						기타 설정
 					</ToggleOnOff>
 					{openedSettings && (
 						<SettingsDialog
@@ -103,7 +103,7 @@ export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 						void submitNewCompass();
 					}}
 				>
-					Create Compass
+					컴퍼스 만들기
 				</Button>
 			</div>
 		</CustomDialog>

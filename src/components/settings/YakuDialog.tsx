@@ -27,7 +27,7 @@ export default function YakuDialog({
 	onClose: () => void;
 }) {
 	return (
-		<CustomDialog title={local ? 'Toggle Local Yaku' : 'Toggle Yaku'} onClose={onClose}>
+		<CustomDialog title={local ? '로컬 역 켜기/끄기' : '일부 역 켜기/끄기'} onClose={onClose}>
 			<div className="flex flex-col justify-center items-center gap-y-8">
 				{local && !inverted && (
 					<Button
@@ -44,7 +44,7 @@ export default function YakuDialog({
 							}
 						}}
 					>
-						Toggle All
+						전부 켜기/끄기
 					</Button>
 				)}
 				<div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ export default function YakuDialog({
 						onClose();
 					}}
 				>
-					Close
+					닫기
 				</Button>
 			</div>
 		</CustomDialog>
@@ -131,12 +131,12 @@ function YakuToggle({
 								<span className="text-lg lg:text-xl">
 									<H>
 										{['', 'Double', 'Triple', 'Quadruple', 'Quintuple', 'Sextuple'][yaku.value - 1] ?? `${yaku.value}x`}{' '}
-										Yakuman
+										역만
 									</H>
 								</span>
 							) : (
 								<span className="text-lg lg:text-xl">
-									<H>{yaku.value}</H> Han
+									<H>{yaku.value}</H> 판
 								</span>
 							)}
 							<div className="flex flex-row justify-end items-center">

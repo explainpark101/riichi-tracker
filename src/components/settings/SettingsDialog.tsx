@@ -57,7 +57,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Four-Player
+							4인마작
 						</Button>
 						<Button
 							active={settings.sanma != null}
@@ -67,7 +67,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Three-Player
+							3인마작
 						</Button>
 					</SettingRow>
 					{settings.sanma != null && (
@@ -140,7 +140,7 @@ export default function SettingsDialog({
 						</>
 					)}
 					<SettingRow
-						name="Red Fives"
+						name="적도라 개수"
 						help={<span>The number of red fives available in the calculator when building a hand.</span>}
 					>
 						<Button
@@ -151,7 +151,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							{settings.sanma ? '2' : '3'} Red Fives
+							적도라 {settings.sanma ? '2' : '3'}개
 						</Button>
 						<Button
 							active={!settings.akadora}
@@ -161,11 +161,11 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							0 Red Fives
+							적도라 없음
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="Toggle Yaku"
+						name="역 사용"
 						help={
 							<span>
 								Toggle the yaku available in the calculator. <br />
@@ -175,8 +175,8 @@ export default function SettingsDialog({
 							</span>
 						}
 					>
-						<Button onClick={() => setOptionalYakuOpened(true)}>Optional Yaku (-{settings.disabledYaku.length})</Button>
-						<Button onClick={() => setLocalYakuOpened(true)}>Local Yaku (+{settings.enabledLocalYaku.length})</Button>
+						<Button onClick={() => setOptionalYakuOpened(true)}>일부 역 사용 (-{settings.disabledYaku.length})</Button>
+						<Button onClick={() => setLocalYakuOpened(true)}>로컬 역 (+{settings.enabledLocalYaku.length})</Button>
 						{optionalYakuOpened && (
 							<YakuDialog
 								yakuList={new Set(settings.disabledYaku)}
@@ -236,10 +236,11 @@ export default function SettingsDialog({
 					</SettingRow>
 					{!inCalculator && (
 						<SettingRow
-							name="Pao Payment"
+							name="파오"
 							compass
 							help={
 								<span>
+									책임지불 <br />
 									Whether to show the ability to distribute points using pao. <br />
 									This is used when a player aids in the creation of a <H>yakuman</H>. <br />
 									With tsumo, the responsible player will pay full amount. <br />
@@ -255,7 +256,7 @@ export default function SettingsDialog({
 									})
 								}
 							>
-								Show
+								켜기
 							</Button>
 							<Button
 								active={!settings.usePao}
@@ -265,12 +266,12 @@ export default function SettingsDialog({
 									})
 								}
 							>
-								Hide
+								끄기
 							</Button>
 						</SettingRow>
 					)}
 					<SettingRow
-						name="Rounded Mangan"
+						name="절삭만관"
 						help={
 							<span>
 								Whether to round up hands worth <H>4</H> han <H>30</H> fu or <H>3</H> han <H>60</H> fu to a{' '}
@@ -287,7 +288,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Rounded
+							켜기
 						</Button>
 						<Button
 							active={!settings.kiriageMangan}
@@ -297,11 +298,11 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							No Rounding
+							끄기 (기본)
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="Counted Yakuman"
+						name="13판 이상 취급"
 						help={
 							<span>
 								Whether to count a hand worth at least <H>13</H> han as <H.B>yakuman</H.B> or as <H.B>sanbaiman</H.B>.
@@ -316,7 +317,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Yakuman
+							역만
 						</Button>
 						<Button
 							active={!settings.kazoeYakuman}
@@ -326,11 +327,11 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Sanbaiman
+							삼배만
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="Yakuman Stacking"
+						name="역만 중첩"
 						help={
 							<span>
 								Whether to allow stacking multiple <H>yakuman</H> together or cap the max at a single <H>yakuman</H>.{' '}
@@ -347,7 +348,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Allow
+							허용
 						</Button>
 						<Button
 							active={!settings.multiYakuman}
@@ -357,12 +358,12 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Disallow
+							끄기
 						</Button>
 					</SettingRow>
 					{settings.multiYakuman && (
 						<SettingRow
-							name="Double Yakuman"
+							name="더블역만"
 							help={
 								<span>
 									Whether to count certain special yaku as being worth a <H>double yakuman</H>. <br />
@@ -384,7 +385,7 @@ export default function SettingsDialog({
 									})
 								}
 							>
-								Allow
+								켜기
 							</Button>
 							<Button
 								active={!settings.doubleYakuman}
@@ -394,12 +395,12 @@ export default function SettingsDialog({
 									})
 								}
 							>
-								Disallow
+								끄기
 							</Button>
 						</SettingRow>
 					)}
 					<SettingRow
-						name="Open All Simples"
+						name="쿠이탕"
 						help={<span>Whether to allow the all simples yaku to be counted if the hand has open sets.</span>}
 					>
 						<Button
@@ -410,7 +411,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Allow
+							켜기
 						</Button>
 						<Button
 							active={!settings.openTanyao}
@@ -420,11 +421,11 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Disallow
+							끄기
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="All Green's Dragon"
+						name="녹일색 발패 필수"
 						help={<span>Whether to require the green dragon to count the all green yaku.</span>}
 					>
 						<Button
@@ -435,7 +436,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Required
+							發패 요구
 						</Button>
 						<Button
 							active={!settings.ryuuiisouHatsu}
@@ -445,20 +446,20 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Optional
+							발패 요구 안함
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="Double Wind Fu"
+						name="연풍패 부수"
 						help={
 							<span>
 								Whether to count a wind pair that is both the round wind and the seat wind as{' '}
 								<H.B>
-									<H>4</H> fu
+									<H>4</H> 부
 								</H.B>{' '}
 								or{' '}
 								<H.B>
-									<H>2</H> fu
+									<H>2</H> 부		
 								</H.B>
 								.
 							</span>
@@ -472,7 +473,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							4 Fu
+							4 부
 						</Button>
 						<Button
 							active={!settings.doubleWindFu}
@@ -482,16 +483,16 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							2 Fu
+							2 부
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="After a Kan Fu"
+						name="영상개화 부수"
 						help={
 							<span>
 								Whether to count the{' '}
 								<H.B>
-									<H>2</H> fu
+									<H>2</H> 부
 								</H.B>{' '}
 								granted by tsumo if the hand won with after a kan.
 							</span>
@@ -505,7 +506,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							2 Fu
+							2 부
 						</Button>
 						<Button
 							active={!settings.rinshanFu}
@@ -515,11 +516,11 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							0 Fu
+							0 부
 						</Button>
 					</SettingRow>
 					<SettingRow
-						name="No Yaku Fu"
+						name="역없음 부수 화료"
 						help={
 							<span>
 								Whether to calculate fu even when with no yaku. Hands will have <H>0</H> han.
@@ -534,7 +535,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Allow
+							가능
 						</Button>
 						<Button
 							active={!settings.noYakuFu}
@@ -544,10 +545,10 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Disallow
+							불가능
 						</Button>
 					</SettingRow>
-					<SettingRow last name="No Yaku Dora" help={<span>Whether to calculate dora even when with no yaku.</span>}>
+					<SettingRow last name="역없음 도라 있으면 화료" help={<span>Whether to calculate dora even when with no yaku.</span>}>
 						<Button
 							active={settings.noYakuDora}
 							onClick={() =>
@@ -556,7 +557,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Allow
+							가능
 						</Button>
 						<Button
 							active={!settings.noYakuDora}
@@ -566,7 +567,7 @@ export default function SettingsDialog({
 								})
 							}
 						>
-							Disallow
+							불가능
 						</Button>
 					</SettingRow>
 				</div>
@@ -585,7 +586,7 @@ export default function SettingsDialog({
 							onClose();
 						}}
 					>
-						Close
+						닫기
 					</Button>
 				</div>
 			</div>

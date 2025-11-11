@@ -39,7 +39,7 @@ export const YakuList = {
 	// Double Yakuman
 	国士無双十三面待ち: yaku({
 		id: '国士無双十三面待ち',
-		name: 'Thirteen-Wait Thirteen Orphans',
+		name: '국사무쌍 13면대기',
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
@@ -52,7 +52,7 @@ export const YakuList = {
 	}),
 	純正九蓮宝燈: yaku({
 		id: '純正九蓮宝燈',
-		name: 'True Nine Gates',
+		name: '순정구련보등',
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
@@ -64,7 +64,7 @@ export const YakuList = {
 	}),
 	四暗刻単騎待ち: yaku({
 		id: '四暗刻単騎待ち',
-		name: 'Single-Wait Four Concealed Triplets',
+		name: '쓰안커 단기',
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
@@ -72,7 +72,7 @@ export const YakuList = {
 	}),
 	大四喜: yaku({
 		id: '大四喜',
-		name: 'Four Big Winds',
+		name: '대사희',
 		yakuman: true,
 		value: 2,
 		help: <span>A set of each wind.</span>,
@@ -84,11 +84,11 @@ export const YakuList = {
 		],
 	}),
 	// Yakuman
-	天和: yaku({ id: '天和', name: 'Blessing of Heaven', yakuman: true, value: 1, closedOnly: true }),
-	地和: yaku({ id: '地和', name: 'Blessing of Earth', yakuman: true, value: 1, closedOnly: true }),
+	天和: yaku({ id: '天和', name: '천화', yakuman: true, value: 1, closedOnly: true }),
+	地和: yaku({ id: '地和', name: '지화', yakuman: true, value: 1, closedOnly: true }),
 	人和: yaku({
 		id: '人和',
-		name: 'Blessing of Man',
+		name: '인화',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -97,7 +97,7 @@ export const YakuList = {
 	}),
 	国士無双: yaku({
 		id: '国士無双',
-		name: 'Thirteen Orphans',
+		name: '국사무쌍',
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
@@ -111,7 +111,7 @@ export const YakuList = {
 	}),
 	九蓮宝燈: yaku({
 		id: '九蓮宝燈',
-		name: 'Nine Gates',
+		name: '구련보등',
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
@@ -124,7 +124,7 @@ export const YakuList = {
 	}),
 	四暗刻: yaku({
 		id: '四暗刻',
-		name: 'Four Concealed Triplets',
+		name: '쓰깡쯔',
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
@@ -133,7 +133,7 @@ export const YakuList = {
 	}),
 	小四喜: yaku({
 		id: '小四喜',
-		name: 'Four Little Winds',
+		name: '소사희',
 		yakuman: true,
 		value: 1,
 		help: <span>Three sets and a pair of each wind.</span>,
@@ -146,7 +146,7 @@ export const YakuList = {
 	}),
 	大三元: yaku({
 		id: '大三元',
-		name: 'Three Big Dragons',
+		name: '대삼원',
 		yakuman: true,
 		value: 1,
 		help: <span>A set of each dragon.</span>,
@@ -158,7 +158,7 @@ export const YakuList = {
 	}),
 	字一色: yaku({
 		id: '字一色',
-		name: 'All Honors',
+		name: '자일색',
 		yakuman: true,
 		value: 1,
 		help: <span>A hand composed entirely out of honor tiles.</span>,
@@ -169,7 +169,7 @@ export const YakuList = {
 	}),
 	緑一色: yaku({
 		id: '緑一色',
-		name: 'All Green',
+		name: '녹일색',
 		yakuman: true,
 		value: 1,
 		help: (
@@ -182,7 +182,7 @@ export const YakuList = {
 	}),
 	清老頭: yaku({
 		id: '清老頭',
-		name: 'All Terminals',
+		name: '청노두',
 		yakuman: true,
 		value: 1,
 		help: <span>A hand composed entirely out of terminal tiles.</span>,
@@ -194,7 +194,7 @@ export const YakuList = {
 	}),
 	四槓子: yaku({
 		id: '四槓子',
-		name: 'Four Quads',
+		name: '쓰깡쯔',
 		yakuman: true,
 		value: 1,
 		help: <span>A hand containing four kans.</span>,
@@ -208,7 +208,7 @@ export const YakuList = {
 	}),
 	大七星: yaku({
 		id: '大七星',
-		name: 'Big Seven Stars',
+		name: '대칠성',
 		type: 'local',
 		yakuman: true,
 		value: 2,
@@ -218,7 +218,7 @@ export const YakuList = {
 	}),
 	大数隣: yaku({
 		id: '大数隣',
-		name: 'Numerous Neighbors',
+		name: '대수린',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -228,7 +228,7 @@ export const YakuList = {
 	}),
 	大車輪: yaku({
 		id: '大車輪',
-		name: 'Big Wheels',
+		name: '대차륜',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -238,7 +238,7 @@ export const YakuList = {
 	}),
 	大竹林: yaku({
 		id: '大竹林',
-		name: 'Bamboo Forest',
+		name: '대죽림',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -248,7 +248,7 @@ export const YakuList = {
 	}),
 	紅孔雀: yaku({
 		id: '紅孔雀',
-		name: 'Red Peacock',
+		name: '홍공작',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -257,7 +257,7 @@ export const YakuList = {
 	}),
 	黒一色: yaku({
 		id: '黒一色',
-		name: 'All Black',
+		name: '흑일색',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -266,7 +266,7 @@ export const YakuList = {
 	}),
 	百万石: yaku({
 		id: '百万石',
-		name: 'One Million Koku',
+		name: '백만석',
 		type: 'local',
 		yakuman: true,
 		value: 1,
@@ -306,7 +306,7 @@ export const YakuList = {
 	}),
 	一発: yaku({
 		id: '一発',
-		name: 'Ippatsu',
+		name: '일발',
 		type: 'optional',
 		value: 1,
 		closedOnly: true,
@@ -318,14 +318,14 @@ export const YakuList = {
 	}),
 	門前清自摸和: yaku({
 		id: '門前清自摸和',
-		name: 'Fully Concealed Hand',
+		name: '멘젠쯔모',
 		value: 1,
 		closedOnly: true,
 		help: <span>Win with tsumo with a closed hand.</span>,
 	}),
 	嶺上開花: yaku({
 		id: '嶺上開花',
-		name: 'After a Kan',
+		name: '영상개화',
 		type: 'optional',
 		value: 1,
 		help: (
@@ -337,41 +337,41 @@ export const YakuList = {
 	}),
 	搶槓: yaku({
 		id: '搶槓',
-		name: 'Robbing a Kan',
+		name: '창깡',
 		type: 'optional',
 		value: 1,
 		help: <span>Win off a player upgrading a pon into a kan.</span>,
 	}),
 	海底摸月: yaku({
 		id: '海底摸月',
-		name: 'Under the Sea',
+		name: '해저로월',
 		type: 'optional',
 		value: 1,
 		help: <span>Win on the final draw from the wall.</span>,
 	}),
 	河底撈魚: yaku({
 		id: '河底撈魚',
-		name: 'Under the River',
+		name: '하저로어',
 		type: 'optional',
 		value: 1,
 		help: <span>Win on the final discard from the wall.</span>,
 	}),
 	// 1 Han
-	場風東: yaku({ id: '場風東', name: 'Prevalent Wind (East)', value: 1, basic: true }),
-	場風南: yaku({ id: '場風南', name: 'Prevalent Wind (South)', value: 1, basic: true }),
-	場風西: yaku({ id: '場風西', name: 'Prevalent Wind (West)', value: 1, basic: true }),
-	場風北: yaku({ id: '場風北', name: 'Prevalent Wind (North)', value: 1, basic: true }),
-	自風東: yaku({ id: '自風東', name: 'Seat Wind (East)', value: 1, basic: true }),
-	自風南: yaku({ id: '自風南', name: 'Seat Wind (South)', value: 1, basic: true }),
-	自風西: yaku({ id: '自風西', name: 'Seat Wind (West)', value: 1, basic: true }),
-	自風北: yaku({ id: '自風北', name: 'Seat Wind (North)', value: 1, basic: true }),
-	客風北: yaku({ id: '客風北', name: 'Guest Wind (North)', value: 1, basic: true }),
-	役牌白: yaku({ id: '役牌白', name: 'White Dragon', value: 1, basic: true }),
-	役牌発: yaku({ id: '役牌発', name: 'Green Dragon', value: 1, basic: true }),
-	役牌中: yaku({ id: '役牌中', name: 'Red Dragon', value: 1, basic: true }),
+	場風東: yaku({ id: '場風東', name: '장풍 동', value: 1, basic: true }),
+	場風南: yaku({ id: '場風南', name: '장풍 남', value: 1, basic: true }),
+	場風西: yaku({ id: '場風西', name: '장풍 서', value: 1, basic: true }),
+	場風北: yaku({ id: '場風北', name: '장풍 북', value: 1, basic: true }),
+	自風東: yaku({ id: '自風東', name: '자풍 동', value: 1, basic: true }),
+	自風南: yaku({ id: '自風南', name: '자풍 남', value: 1, basic: true }),
+	自風西: yaku({ id: '自風西', name: '자풍 서', value: 1, basic: true }),
+	自風北: yaku({ id: '自風北', name: '자풍 북', value: 1, basic: true }),
+	客風北: yaku({ id: '客風北', name: '북도라', value: 1, basic: true }),
+	役牌白: yaku({ id: '役牌白', name: '역패 백', value: 1, basic: true }),
+	役牌発: yaku({ id: '役牌発', name: '역패 발', value: 1, basic: true }),
+	役牌中: yaku({ id: '役牌中', name: '역패 중', value: 1, basic: true }),
 	平和: yaku({
 		id: '平和',
-		name: 'Pinfu',
+		name: '핑후',
 		type: 'optional',
 		value: 1,
 		closedOnly: true,
@@ -385,7 +385,7 @@ export const YakuList = {
 	}),
 	断么九: yaku({
 		id: '断么九',
-		name: 'All Simples',
+		name: '탕야오',
 		type: 'optional',
 		value: 1,
 		basic: true,
@@ -396,7 +396,7 @@ export const YakuList = {
 	}),
 	一盃口: yaku({
 		id: '一盃口',
-		name: 'Pure Double Sequence',
+		name: '이페코',
 		value: 1,
 		closedOnly: true,
 		help: <span>A hand with two identical sequences.</span>,
@@ -404,7 +404,7 @@ export const YakuList = {
 	}),
 	十二落抬: yaku({
 		id: '十二落抬',
-		name: 'All Calls',
+		name: '십이낙태',
 		type: 'local',
 		value: 1,
 		basic: true,
@@ -425,7 +425,7 @@ export const YakuList = {
 	// 1+ Han
 	三色同順: yaku({
 		id: '三色同順',
-		name: 'Mixed Triple Sequence',
+		name: '삼색동순',
 		value: 2,
 		openMinus: true,
 		help: <span>The same sequence in each suit.</span>,
@@ -437,7 +437,7 @@ export const YakuList = {
 	}),
 	一気通貫: yaku({
 		id: '一気通貫',
-		name: 'Pure Straight',
+		name: '일기통관',
 		value: 2,
 		openMinus: true,
 		help: (
@@ -453,7 +453,7 @@ export const YakuList = {
 	}),
 	混全帯么九: yaku({
 		id: '混全帯么九',
-		name: 'Half Outside Hand',
+		name: '찬타',
 		value: 2,
 		openMinus: true,
 		help: <span>All tile sets in the hand contains a terminal or an honor.</span>,
@@ -466,7 +466,7 @@ export const YakuList = {
 	// 2 Han
 	七対子: yaku({
 		id: '七対子',
-		name: 'Seven Pairs',
+		name: '치또이쯔',
 		value: 2,
 		closedOnly: true,
 		basic: true,
@@ -477,7 +477,7 @@ export const YakuList = {
 	}),
 	五門斉: yaku({
 		id: '五門斉',
-		name: 'All Types',
+		name: '오문제',
 		type: 'local',
 		value: 2,
 		help: <span>A hand containing all five different suits (characters, circles, bamboo, winds, and dragons).</span>,
@@ -491,7 +491,7 @@ export const YakuList = {
 	}),
 	対々和: yaku({
 		id: '対々和',
-		name: 'All Triplets',
+		name: '또이또이',
 		value: 2,
 		basic: true,
 		help: <span>A hand consisting of only triplets.</span>,
@@ -505,7 +505,7 @@ export const YakuList = {
 	}),
 	三色同刻: yaku({
 		id: '三色同刻',
-		name: 'Triple Triplets',
+		name: '삼색동각',
 		value: 2,
 		help: <span>A hand containing the same triplet in each suit.</span>,
 		example: [
@@ -516,7 +516,7 @@ export const YakuList = {
 	}),
 	三暗刻: yaku({
 		id: '三暗刻',
-		name: 'Three Concealed Triplets',
+		name: '산안커',
 		value: 2,
 		help: <span>Three concealed triplets (not called with pon, open kan, or ron). Other sets may be open.</span>,
 		example: [
@@ -526,7 +526,7 @@ export const YakuList = {
 	}),
 	三連刻: yaku({
 		id: '三連刻',
-		name: 'Three Consecutive Triplets',
+		name: '삼련각',
 		type: 'local',
 		value: 2,
 		help: <span>A hand containing three triplets in the same suit where their number steps by one.</span>,
@@ -538,7 +538,7 @@ export const YakuList = {
 	}),
 	三槓子: yaku({
 		id: '三槓子',
-		name: 'Three Quads',
+		name: '산깡쯔',
 		value: 2,
 		help: <span>A hand containing three kans.</span>,
 		example: [
@@ -550,7 +550,7 @@ export const YakuList = {
 	}),
 	小三元: yaku({
 		id: '小三元',
-		name: 'Three Little Dragons',
+		name: '소삼원',
 		value: 2,
 		help: (
 			<span>
@@ -565,7 +565,7 @@ export const YakuList = {
 	}),
 	混老頭: yaku({
 		id: '混老頭',
-		name: 'All Terminals and Honors',
+		name: '혼노두',
 		value: 2,
 		help: <span>A hand composed entirely out of terminal and honor tiles.</span>,
 		example: [
@@ -577,7 +577,7 @@ export const YakuList = {
 	// 2+ Han
 	一色三順: yaku({
 		id: '一色三順',
-		name: 'Pure Triple Sequence',
+		name: '일색삼순',
 		type: 'local',
 		value: 3,
 		openMinus: true,
@@ -590,7 +590,7 @@ export const YakuList = {
 	}),
 	純全帯么九: yaku({
 		id: '純全帯么九',
-		name: 'Fully Outside Hand',
+		name: '준찬타',
 		value: 3,
 		openMinus: true,
 		help: <span>All tile sets in the hand contains a terminal.</span>,
@@ -601,7 +601,7 @@ export const YakuList = {
 	}),
 	混一色: yaku({
 		id: '混一色',
-		name: 'Half Flush',
+		name: '혼일색',
 		value: 3,
 		openMinus: true,
 		basic: true,
@@ -615,7 +615,7 @@ export const YakuList = {
 	// 3 Han
 	二盃口: yaku({
 		id: '二盃口',
-		name: 'Twice Pure Double Sequence',
+		name: '량페코',
 		value: 3,
 		closedOnly: true,
 		help: <span>Two separate instances of two identical sequences. Does not combine with seven pairs.</span>,
@@ -627,21 +627,21 @@ export const YakuList = {
 	// 5+ Han
 	清一色: yaku({
 		id: '清一色',
-		name: 'Full Flush',
+		name: '청일색',
 		value: 6,
 		openMinus: true,
 		help: <span>A hand composed out of only one suit.</span>,
 		example: [['1p', '2p', '3p']],
 	}),
 	// Dora
-	ドラ: yaku({ id: 'ドラ', name: 'Dora', type: 'extra', value: 1 }),
-	裏ドラ: yaku({ id: '裏ドラ', name: 'Uradora', type: 'extra', value: 1 }),
-	赤ドラ: yaku({ id: '赤ドラ', name: 'Red Fives', type: 'extra', value: 1 }),
-	抜きドラ: yaku({ id: '抜きドラ', name: 'Kita', type: 'extra', value: 1 }),
+	ドラ: yaku({ id: 'ドラ', name: '도라', type: 'extra', value: 1 }),
+	裏ドラ: yaku({ id: '裏ドラ', name: '뒷도라', type: 'extra', value: 1 }),
+	赤ドラ: yaku({ id: '赤ドラ', name: '적도라', type: 'extra', value: 1 }),
+	抜きドラ: yaku({ id: '抜きドラ', name: '북도라', type: 'extra', value: 1 }),
 	// Extra
-	他の役満: yaku({ id: '他の役満', name: 'Other Yakuman', type: 'extra', value: 1 }),
-	他の役: yaku({ id: '他の役', name: 'Other Yaku', type: 'extra', value: 1 }),
-	他のドラ: yaku({ id: '他のドラ', name: 'Other Dora', type: 'extra', value: 1 }),
+	他の役満: yaku({ id: '他の役満', name: 'Other 역만', type: 'extra', value: 1 }),
+	他の役: yaku({ id: '他の役', name: 'Other 역', type: 'extra', value: 1 }),
+	他のドラ: yaku({ id: '他のドラ', name: 'Other 도라', type: 'extra', value: 1 }),
 } as const;
 
 export const YakuSort = Object.fromEntries(Object.keys(YakuList).map((x, i) => [x, i]));
