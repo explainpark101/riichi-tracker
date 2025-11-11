@@ -49,12 +49,13 @@ export default function App() {
 				</CircleButton>
 			</div>
 			<div className="flex flex-col justify-center items-center min-h-screen gap-y-4 lg:gap-y-8 py-4 px-2">
-				<h1 className="text-4xl lg:text-6xl text-center">Riichi Tracker</h1>
-				<h2 className="text-xl lg:text-2xl text-center">Keep track of your games!</h2>
+				<h1 className="text-4xl lg:text-6xl text-center">Riichi Tracker KR</h1>
+				<h2 className="text-xl lg:text-2xl text-center">Riichi Tracker의 한국어 번역입니다.</h2>
+				<h2 className="text-xl lg:text-xl text-center">Keep track of your games!</h2>
 				<div className="flex flex-row justify-center items-start gap-x-8">
 					<div className="flex flex-col justify-center items-center gap-y-2 lg:gap-y-4">
 						<div className="flex flex-col justify-center items-center gap-y-2 lg:gap-y-4">
-							<Button onClick={() => setOpenNewCompassDialog(true)}>New Game</Button>
+							<Button onClick={() => setOpenNewCompassDialog(true)}>새 대국 시작하기</Button>
 							<Button
 								disabled={toolsGame == null || !toolsGame.ok}
 								onClick={() => {
@@ -62,7 +63,7 @@ export default function App() {
 									navigate('/compass', { state, replace: true });
 								}}
 							>
-								Continue
+								저번 대국 계속하기
 							</Button>
 							<Button
 								onClick={() => {
@@ -76,24 +77,30 @@ export default function App() {
 									})();
 								}}
 							>
-								Calculator
+								점수 계산기
 							</Button>
 							<Button
 								onClick={() => {
 									navigate('/reference', { replace: true });
 								}}
 							>
-								Reference
+								참고 자료
 							</Button>
 						</div>
 					</div>
 				</div>
 				<ul className="text-base lg:text-xl flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc px-6">
 					<li>
-						Create a <H>Compass</H> by using the <H>New Game</H> button.
+						원본(영문)은 <H><a target="_blank" rel="noreferrer" className="underline hover:text-blue-500 transition-colors" href="https://riichi.onecomp.one/">여기</a></H>에서 볼 수 있습니다.
 					</li>
 					<li>
-						Add riichi sticks by tapping on the <H>Riichi</H> button.
+						현재 한국어 번역은 완전하지 않습니다. 일부 미번역본이 존재할 수 있습니다.
+					</li>
+					<li>
+						Create a <H>Compass</H> by using the <H>새 대국 시작하기</H> button.
+					</li>
+					<li>
+						Add riichi sticks by tapping on the <H>리치</H> button.
 					</li>
 					<li>
 						Transfer scores by tapping on the <H>winning player&apos;s wind tile</H> and using the <H>Calculator</H>.
@@ -103,10 +110,10 @@ export default function App() {
 						<br />
 						This can be toggled at the <H>top-right of the Calculator</H>.
 						<br />
-						The default input can be set with the <H>Prefer Han &amp; Fu Input</H> option.
+						The default input can be set with the <H>점수 판·부수로 입력하기</H> option.
 					</li>
 					<li>
-						Handle draws and repeats by tapping on the <H>center wind tile</H>.
+						Handle draws and repeats by tapping on the <H>중앙에 위치한 풍패</H>.
 					</li>
 					<li>
 						Manually edit scores by tapping on a <H>player&apos;s score display</H>.

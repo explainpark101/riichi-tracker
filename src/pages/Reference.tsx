@@ -43,7 +43,7 @@ export default function Reference() {
 					</div>
 					<div ref={setTabsEl} className="flex flex-col justify-center items-center w-full gap-y-2">
 						<div className="flex flex-col justify-center items-center w-full gap-y-2 px-2 py-2">
-							<h1 className="text-2xl lg:text-4xl">Reference</h1>
+							<h1 className="text-2xl lg:text-4xl">참고자료</h1>
 						</div>
 						<Tab.Group
 							defaultIndex={params.has('tab') ? tabs.indexOf(params.get('tab')!) : 0}
@@ -52,9 +52,9 @@ export default function Reference() {
 							}}
 						>
 							<Tab.List className="flex flex-row flex-wrap gap-2 justify-center items-center mb-2">
-								<StyledTab>Tiles</StyledTab>
-								<StyledTab>Yaku List</StyledTab>
-								<StyledTab>Scoring Table</StyledTab>
+								<StyledTab>패</StyledTab>
+								<StyledTab>역 목록</StyledTab>
+								<StyledTab>점수 표</StyledTab>
 							</Tab.List>
 							<Tab.Panels className="w-full min-h-screen flex flex-col justify-center px-2 py-4 lg:py-8 bg-slate-300 dark:bg-sky-900">
 								<Tab.Panel>
@@ -96,13 +96,13 @@ function StyledTab({ children }: { children: ReactNode }) {
 function TileReference() {
 	return (
 		<VerticalRow>
-			<h2 className="text-xl lg:text-3xl">Characters</h2>
-			<LabeledTiles suited tiles={TilesBySuit.m.map((t) => [t, t[0]])} />
-			<h2 className="text-xl lg:text-3xl">Circles</h2>
-			<LabeledTiles suited tiles={TilesBySuit.p.map((t) => [t, t[0]])} />
-			<h2 className="text-xl lg:text-3xl">Bamboo</h2>
-			<LabeledTiles suited tiles={TilesBySuit.s.map((t) => [t, t[0]])} />
-			<h2 className="text-xl lg:text-3xl">Winds</h2>
+			<h2 className="text-xl lg:text-3xl">만수패</h2>
+			<LabeledTiles suited tiles={TilesBySuit.m.map((t) => [t, `${t[0]}만`])} />
+			<h2 className="text-xl lg:text-3xl">통수패</h2>
+			<LabeledTiles suited tiles={TilesBySuit.p.map((t) => [t, `${t[0]}통`])} />
+			<h2 className="text-xl lg:text-3xl">삭수패</h2>
+			<LabeledTiles suited tiles={TilesBySuit.s.map((t) => [t, `${t[0]}삭`])} />
+			<h2 className="text-xl lg:text-3xl">풍패</h2>
 			<LabeledTiles
 				tiles={[
 					['1z', '동'],
@@ -111,7 +111,7 @@ function TileReference() {
 					['4z', '북'],
 				]}
 			/>
-			<h2 className="text-xl lg:text-3xl">Dragons</h2>
+			<h2 className="text-xl lg:text-3xl">삼원패</h2>
 			<LabeledTiles
 				tiles={[
 					['5z', '백'],
@@ -173,13 +173,13 @@ function YakuReference() {
 		<div className="flex flex-col gap-y-4 lg:gap-y-8">
 			<div className="flex flex-row flex-wrap gap-2 justify-center items-center">
 				<Button active={showLocal} onClick={() => setShowLocal(!showLocal)}>
-					Show Local
+					로컬역 보기
 				</Button>
 				<Button active={onlyBasic} onClick={() => setOnlyBasic(!onlyBasic)}>
-					Only Easy
+					[쉬운 역]만 보기
 				</Button>
 				<Button active={hideYakuman} onClick={() => setHideYakuman(!hideYakuman)}>
-					Hide Yakuman
+					역만 숨기기
 				</Button>
 			</div>
 			<div className="flex flex-col gap-y-1 lg:gap-y-2">
@@ -228,23 +228,23 @@ function YakuItem({ yaku }: { yaku: Omit<Yaku, 'id'> }) {
 							{yaku.value}
 							{yaku.per && 'x'}{' '}
 						</H>
-						Han
+						판
 					</span>
 				)}
 				<div className="flex flex-row justify-end items-center">
 					{yaku.closedOnly && (
 						<span className="text-base lg:text-xl">
-							<H.Red>Closed only</H.Red>
+							<H.Red>멘젠한정</H.Red>
 						</span>
 					)}
 					{yaku.openMinus && (
 						<span className="text-base lg:text-xl">
-							<H.Red>-1 if open</H.Red>
+							<H.Red>후로시 -1판</H.Red>
 						</span>
 					)}
 					{yaku.type === 'extra' && (
 						<span className="text-base lg:text-xl">
-							<H.Red>Not yaku</H.Red>
+							<H.Red>역 아님</H.Red>
 						</span>
 					)}
 				</div>
@@ -289,29 +289,29 @@ function ScoreReference() {
 			<div className="flex flex-row flex-wrap gap-4 lg:gap-6 justify-center items-center">
 				<div className="w-40 h-40 lg:w-48 lg:h-48 flex flex-col justify-center items-center gap-2 lg:gap-4 p-0.5 rounded shadow bg-slate-200 dark:bg-gray-900">
 					<span className="text-lg font-semibold">
-						<H>Legend</H>
+						<H>범례</H>
 					</span>
 					<div className="w-full flex flex-row justify-center items-center text-xs lg:text-sm italic">
-						<span className="w-1/2 flex flex-row justify-center items-center">Dealer</span>
-						<span className="w-1/2 flex flex-row justify-center items-center">Non-Dealer</span>
+						<span className="w-1/2 flex flex-row justify-center items-center">오야</span>
+						<span className="w-1/2 flex flex-row justify-center items-center">코(자)</span>
 					</div>
 					<div className="relative w-full flex flex-col justify-center items-center gap-2 text-sm lg:text-base">
 						<div className="w-full flex flex-row justify-center items-center">
 							<span className="w-1/2 flex flex-row justify-center items-center text-center">
-								Tsumo
-								<br />
-								Win/Loss
+								쯔모
+								{/* <br />
+								Win/Loss */}
 							</span>
 							<span className="w-1/2 flex flex-row justify-center items-center text-center">
-								Tsumo
-								<br />
-								Win/Loss
+								쯔모
+								{/* <br />
+								Win/Loss */}
 							</span>
 						</div>
 						<div className="absolute h-full w-0 border border-gray-800"></div>
 						<div className="w-full flex flex-row justify-center items-center">
-							<span className="w-1/2 flex flex-row justify-center items-center">Ron</span>
-							<span className="w-1/2 flex flex-row justify-center items-center">Ron</span>
+							<span className="w-1/2 flex flex-row justify-center items-center">론</span>
+							<span className="w-1/2 flex flex-row justify-center items-center">론</span>
 						</div>
 					</div>
 				</div>
@@ -322,8 +322,8 @@ function ScoreReference() {
 						</div>
 						<div className="flex flex-row flex-wrap gap-2 justify-center items-start w-[13rem] md:w-[20.5rem]">
 							<Toggle
-								left="4-Player"
-								right="3-Player"
+								left="4인마작"
+								right="3인마작"
 								toggled={sanma != null}
 								onToggle={() => setSanma(sanma ? null : 'loss')}
 							/>
@@ -332,7 +332,7 @@ function ScoreReference() {
 					{sanma != null && (
 						<div className="flex flex-row flex-wrap lg:flex-nowrap justify-center items-center gap-2">
 							<div className="flex flex-row justify-between items-center gap-2 w-[7.5rem] lg:w-[9rem]">
-								<span className="text-xl lg:text-2xl">Tsumo Points</span>
+								<span className="text-xl lg:text-2xl">쯔모 타점</span>
 							</div>
 							<div className="flex flex-row flex-wrap gap-2 justify-center items-start w-[13rem] md:w-[20.5rem]">
 								<Toggle
@@ -363,61 +363,61 @@ function ScoreReference() {
 					<ScoreSection
 						title={
 							<span>
-								<H>3</H> Han <H>70+</H> Fu, <H>4</H> Han <H>40+</H> Fu, <H>5</H> Han
+								<H>3</H> 판 <H>70+</H> 부, <H>4</H> 판 <H>40+</H> 부, <H>5</H> 판
 							</span>
 						}
 					>
-						<ScoreCard title={<H>Mangan</H>} points={mangan} />
+						<ScoreCard title={<H>만관</H>} points={mangan} />
 					</ScoreSection>
 				</li>
 				<li>
 					<ScoreSection
 						title={
 							<span>
-								<H>6-7</H> Han
+								<H>6-7</H> 판
 							</span>
 						}
 					>
-						<ScoreCard title={<H>Haneman</H>} points={haneman} />
+						<ScoreCard title={<H>하네만</H>} points={haneman} />
 					</ScoreSection>
 				</li>
 				<li>
 					<ScoreSection
 						title={
 							<span>
-								<H>8-10</H> Han
+								<H>8-10</H> 판
 							</span>
 						}
 					>
-						<ScoreCard title={<H>Baiman</H>} points={baiman} />
+						<ScoreCard title={<H>배만</H>} points={baiman} />
 					</ScoreSection>
 				</li>
 				<li>
 					<ScoreSection
 						title={
 							<span>
-								<H>11-12</H> Han
+								<H>11-12</H> 판
 							</span>
 						}
 					>
-						<ScoreCard title={<H>Sanbaiman</H>} points={sanbaiman} />
+						<ScoreCard title={<H>삼배만</H>} points={sanbaiman} />
 					</ScoreSection>
 				</li>
 				<li>
 					<ScoreSection
 						title={
 							<span>
-								<H>13+</H> Han
+								<H>13+</H> 판
 							</span>
 						}
 					>
-						<ScoreCard title={<H>Yakuman</H>} points={yakuman} />
+						<ScoreCard title={<H>역만</H>} points={yakuman} />
 					</ScoreSection>
 				</li>
 			</ul>
 			<ul className="text-base lg:text-xl flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc px-6">
 				<li>
-					<H>3</H> han <H>60</H> fu and <H>4</H> han <H>30</H> fu can be rounded up to a <H>mangan</H> in certain rule
+					<H>3</H> 판 <H>60</H> 부 and <H>4</H> 판 <H>30</H> 부 can be rounded up to a <H>mangan</H> in certain rule
 					variations.
 				</li>
 				<li>
@@ -428,43 +428,43 @@ function ScoreReference() {
 					The general formula is as follows:
 					<ol className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-decimal ml-4 lg:ml-8 mt-1">
 						<li>
-							If the hand is a <H>yakuman</H>, score 8000 basic points per <H>yakuman</H>. Skip to step 8.
+							If the hand is a <H>역만</H>, score 8000 basic points per <H>역만</H>. Skip to step 8.
 						</li>
 						<li>Determine yaku and dora to count up the han value.</li>
 						<li>
 							For han of <H>5</H> or more, counting fu is not necessary, skip to step 8:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
-									<H>5</H> = <H>mangan</H> worth 2000 basic points.
+									<H>5</H> = <H>만관</H> worth 2000 basic points.
 								</li>
 								<li>
-									<H>6-7</H> = <H>haneman</H> worth 3000 basic points.
+									<H>6-7</H> = <H>하네만</H> worth 3000 basic points.
 								</li>
 								<li>
-									<H>8-10</H> = <H>baiman</H> worth 4000 basic points.
+									<H>8-10</H> = <H>배만</H> worth 4000 basic points.
 								</li>
 								<li>
-									<H>11-12</H> = <H>sanbaiman</H> worth 6000 basic points.
+									<H>11-12</H> = <H>삼배만</H> worth 6000 basic points.
 								</li>
 								<li>
-									<H>13+</H> = <H>yakuman</H> worth 8000 basic points.
+									<H>13+</H> = <H>역만</H> worth 8000 basic points.
 								</li>
 							</ul>
 						</li>
 						<li>
-							Determine fu value using hand composition, rounded up to the nearest 10:
+							부수를 결정하기 위해 패 구성을 사용하고, 가장 가까운 10으로 반올림합니다:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
-									<H>20</H> base fu
+									<H>20</H> 기본 부수
 									<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 										<li>
-											<H>+2</H> for winning with tsumo (some rules may score <H>0</H> for tsumo after a kan)
+											<H>+2</H> for winning with 쯔모 (some rules may score <H>0</H> for 쯔모 after a kan)
 										</li>
 										<li>
-											<H>+10</H> for winning with closed ron
+											<H>+10</H> for winning with 멘젠 론
 										</li>
 										<li>
-											<H>+2</H> for having a single wait
+											<H>+2</H> for having a 단기 대기
 										</li>
 										<li>
 											<H>+2</H> per yakuhai pair (some rules may have <H>+4</H> for double wind pair)
@@ -472,7 +472,7 @@ function ScoreReference() {
 									</ul>
 								</li>
 								<li>
-									<H>+2</H> fu per triplet
+									<H>+2</H> 부 per triplet
 									<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 										<li>
 											<H>x2</H> if concealed
@@ -481,48 +481,48 @@ function ScoreReference() {
 											<H>x2</H> if terminals or honors
 										</li>
 										<li>
-											<H>x4</H> if kan
+											<H>x4</H> if 깡
 										</li>
 									</ul>
 								</li>
 								<li>
-									Seven pairs is always <H>25</H> fu and not rounded.
+									치또이쯔 is always <H>25</H> 부 and not rounded.
 								</li>
 								<li>
-									Pinfu tsumo is always <H>20</H> fu.
+									핑후 쯔모 is always <H>20</H> 부.
 								</li>
 								<li>
-									Open hands are always worth at least <H>30</H> fu.
+									후로하면 최소 <H>30</H> 부.
 								</li>
 							</ul>
 						</li>
 						<li>
 							Calculate basic points with{' '}
 							<span className="font-mono">
-								fu×2<sup>2+han</sup>
+								부×2<sup>2+판</sup>
 							</span>
 							.
 						</li>
 						<li>
-							If using rounded <H>mangan</H> rules, round 1920 basic points to 2000.
+							If using rounded <H>만관</H> rules, round 1920 basic points to 2000.
 						</li>
 						<li>
-							If above 2000 basic points but at <H>4</H> or fewer han, fix at a <H>mangan</H> of 2000 points.
+							If above 2000 basic points but at <H>4</H> or fewer han, fix at a <H>만관</H> of 2000 points.
 						</li>
 						<li>
-							On a win, transfer basic points rounded up to the nearest 100:
+							승리 시, 가장 가까운 100으로 반올림한 점수를 줘야합니다:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
-									Non-dealer tsumo: <H>1x</H> from other non-dealers, <H>2x</H> from dealer.
+									코 쯔모: <H>1x</H> from other 코들, <H>2x</H> from 오야.
 								</li>
 								<li>
-									Non-dealer ron: <H>4x</H> from dealt-in player.
+									코 론: <H>4x</H> from 방총당한 플레이어.
 								</li>
 								<li>
-									Dealer tsumo: <H>2x</H> from all other players.
+									오야 쯔모: <H>2x</H> from 모든 플레이어.
 								</li>
 								<li>
-									Dealer ron: <H>6x</H> from dealt-in player.
+									오야 론: <H>6x</H> from 방총당한 플레이어.
 								</li>
 							</ul>
 						</li>
@@ -538,7 +538,7 @@ function Han({ han, fus, settings }: { han: number; fus: number[]; settings: Sco
 		<ScoreSection
 			title={
 				<span>
-					<H>{han}</H> Han
+					<H>{han}</H> 판
 				</span>
 			}
 		>
@@ -566,7 +566,7 @@ function Fu({ han, fu, settings }: { han: number; fu: number; settings: ScoreSet
 		<ScoreCard
 			title={
 				<span>
-					<H>{fu}</H> Fu
+					<H>{fu}</H> 부
 				</span>
 			}
 			noTsumo={noTsumo}
