@@ -97,7 +97,7 @@ export function DrawDialog({
 	};
 
 	return (
-		<CustomDialog onClose={onClose} title="Handle Draws">
+		<CustomDialog onClose={onClose} title="유국 처리">
 			<div className="flex flex-col justify-center items-center gap-y-8">
 				<form
 					className="flex flex-col justify-center items-center gap-y-2"
@@ -106,17 +106,17 @@ export function DrawDialog({
 						void submitDraw();
 					}}
 				>
-					<p className="text-xl lg:text-2xl">Draw Type</p>
+					<p className="text-xl lg:text-2xl">유국 종류</p>
 					<ToggleThree
-						left="Exhaust"
-						middle="Abort"
-						right="Chombo"
+						left="황폐유국"
+						middle="도중유국"
+						right="촌보"
 						toggled={drawType}
 						onToggle={(b) => setDrawType(b)}
 					/>
 					{drawType === 0 && (
 						<>
-							<p className="text-xl lg:text-2xl">Ready Players</p>
+							<p className="text-xl lg:text-2xl">텐파이</p>
 							<HorizontalRow>
 								{playerIxes.map((i) => (
 									<TileButton
@@ -139,9 +139,9 @@ export function DrawDialog({
 									/>
 								))}
 							</HorizontalRow>
-							<ToggleOnOff toggled={drawRepeat} onToggle={(b) => setDrawRepeat(b)}>
-								Repeat Round
-							</ToggleOnOff>
+							{/* <ToggleOnOff toggled={drawRepeat} onToggle={(b) => setDrawRepeat(b)}>
+								이 국 반복하기
+							</ToggleOnOff> */}
 						</>
 					)}
 					{drawType === 2 && (
@@ -171,10 +171,11 @@ export function DrawDialog({
 				</form>
 				<Button
 					onClick={() => {
+						setDrawRepeat(false);
 						void submitDraw();
 					}}
 				>
-					Submit
+					유국
 				</Button>
 			</div>
 		</CustomDialog>

@@ -82,7 +82,7 @@ export function nextDoraTile(t: TileCode, k = 1, sanma: boolean): TileCode {
 }
 
 export function translateWind(w: Wind): string {
-	return { 1: 'East', 2: 'South', 3: 'West', 4: 'North' }[w];
+	return { 1: '동', 2: '남', 3: '서', 4: '북' }[w];
 }
 
 export interface Hand {

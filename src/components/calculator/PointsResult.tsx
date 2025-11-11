@@ -19,10 +19,10 @@ export default function PointsResult({
 				<span className="text-6xl">
 					<H>{result.points.total}</H>
 				</span>
-				<span className="text-2xl">Points</span>
+				<span className="text-2xl">점</span>
 			</div>
 			<div className="text-2xl text-center">
-				Points to take: <TakeText result={result} pao={pao} />
+				가져갈 점수: <TakeText result={result} pao={pao} />
 			</div>
 		</div>
 	);
@@ -33,7 +33,7 @@ export function TakeText({ result, pao }: { result: CalculatedValue & { agari: '
 		result.agari === 'tsumo' ? (
 			pao ? (
 				<span>
-					<H>{result.points.total}</H> from liable
+					<H>{result.points.total}</H> 책임 지불
 				</span>
 			) : (
 				<span>
@@ -50,7 +50,7 @@ export function TakeText({ result, pao }: { result: CalculatedValue & { agari: '
 	) : result.agari === 'tsumo' ? (
 		pao ? (
 			<span>
-				<H>{result.points.total}</H> from liable
+				<H>{result.points.total}</H> 책임 지불
 			</span>
 		) : (
 			<>

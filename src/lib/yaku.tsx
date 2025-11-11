@@ -280,7 +280,7 @@ export const YakuList = {
 	// Riichi & Special
 	立直: yaku({
 		id: '立直',
-		name: 'Riichi',
+		name: '리치',
 		value: 1,
 		closedOnly: true,
 		basic: true,
@@ -293,7 +293,7 @@ export const YakuList = {
 	}),
 	ダブル立直: yaku({
 		id: 'ダブル立直',
-		name: 'Double Riichi',
+		name: '더블 리치',
 		type: 'optional',
 		value: 2,
 		closedOnly: true,

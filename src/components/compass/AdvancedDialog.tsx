@@ -27,7 +27,7 @@ export function AdvancedDialog({ gameId, game, onClose }: { gameId: string; game
 							})();
 						}}
 					>
-						Rotate Seats
+						순서 Rotate
 					</Button>
 					<Counter
 						onDecrement={() => {
@@ -49,7 +49,7 @@ export function AdvancedDialog({ gameId, game, onClose }: { gameId: string; game
 							})();
 						}}
 					>
-						{translateWind(roundWind)} {round}
+						{translateWind(roundWind)} {round} 국
 					</Counter>
 					<Counter
 						canDecrement={repeats > 0}
@@ -70,7 +70,7 @@ export function AdvancedDialog({ gameId, game, onClose }: { gameId: string; game
 							})();
 						}}
 					>
-						Repeats ({repeats})
+						{repeats} 본장
 					</Counter>
 					<Counter
 						canDecrement={riichiSticks > riichi.filter((r) => r).length}
@@ -91,7 +91,7 @@ export function AdvancedDialog({ gameId, game, onClose }: { gameId: string; game
 							})();
 						}}
 					>
-						Riichi ({riichiSticks})
+						리치봉 개수 ({riichiSticks}개)
 					</Counter>
 				</div>
 			</div>

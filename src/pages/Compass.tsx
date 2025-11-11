@@ -185,6 +185,7 @@ function CompassWithGame({ locState, game }: { locState: CompassState; game: Gam
 							}}
 							tile={`${roundWind}z`}
 						/>
+						<small>유국버튼 ⬆︎</small>
 					</div>
 					<span
 						className={clsx(
@@ -194,7 +195,7 @@ function CompassWithGame({ locState, game }: { locState: CompassState; game: Gam
 						)}
 					>
 						<span>
-							{translateWind(roundWind)} {round}
+							{translateWind(roundWind)} {round} 국
 						</span>
 						<span className="flex flex-row gap-x-4 justify-center items-center">
 							<span className="flex flex-row gap-x-2 justify-center items-center">

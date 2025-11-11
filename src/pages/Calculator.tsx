@@ -553,11 +553,11 @@ function CalculatorWithGame({
 								className="w-full min-h-screen flex flex-col justify-center px-4 py-4 lg:py-8"
 							>
 								<div className="flex flex-col justify-center items-center gap-y-2 lg:gap-y-4">
-									<h1 className="text-3xl lg:text-4xl">Points Calculator</h1>
+									<h1 className="text-3xl lg:text-4xl">점수 계산기</h1>
 									<div className="flex flex-row flex-wrap gap-x-8 justify-center items-center min-w-min">
 										{game != null && (
 											<div className="flex flex-col flex-wrap justify-center items-center gap-x-8 gap-y-1">
-												<span className="text-xl">Round</span>
+												<span className="text-xl">자풍</span>
 												<WindSelect
 													forced={locState.t === 'transfer'}
 													value={hand.roundWind}
@@ -573,7 +573,7 @@ function CalculatorWithGame({
 											</div>
 										)}
 										<div className="flex flex-col justify-center items-center gap-y-1">
-											<span className="text-xl">{game == null ? 'Dealer' : 'Seat'}</span>
+											<span className="text-xl">장풍</span>
 											<WindSelect
 												forced={locState.t === 'transfer'}
 												dealerOnly={game == null}
@@ -602,8 +602,8 @@ function CalculatorWithGame({
 													}
 												});
 											}}
-											left="Tsumo"
-											right="Ron"
+											left="쯔모"
+											right="론"
 										/>
 									</div>
 									<HanFu han={han} fu={fu} agari={hand.agari} onHanChange={setHan} onFuChange={setFu} />
@@ -632,7 +632,7 @@ function CalculatorWithGame({
 													void transferScores(hanFuScores);
 												}}
 											>
-												Transfer Points
+												점수 이동
 											</button>
 										</div>
 									)}
@@ -760,7 +760,7 @@ function CalculatorWithGame({
 											onActionChange={updateAction}
 											small
 										>
-											Chii
+											치
 										</ActionButton>
 									)}
 									<ActionButton
@@ -770,7 +770,7 @@ function CalculatorWithGame({
 										onActionChange={updateAction}
 										small
 									>
-										Pon
+										퐁
 									</ActionButton>
 									<ActionButton
 										t="kan"
@@ -779,7 +779,7 @@ function CalculatorWithGame({
 										onActionChange={updateAction}
 										small
 									>
-										Kan
+										깡
 									</ActionButton>
 									<ActionButton
 										t="closedKan"
@@ -788,7 +788,7 @@ function CalculatorWithGame({
 										onActionChange={updateAction}
 										small
 									>
-										Closed Kan
+										안깡
 									</ActionButton>
 								</HorizontalRow>
 								<VerticalRow ref={setTileSelectEl} className="scroll-mb-4">
@@ -835,7 +835,7 @@ function CalculatorWithGame({
 									<div className="flex flex-row flex-wrap gap-x-8 justify-center items-center min-w-min">
 										<div className="flex flex-row flex-wrap gap-x-8 justify-center items-center min-w-min">
 											<div className="flex flex-col flex-wrap justify-center items-center gap-x-8 gap-y-1">
-												<span className="text-xl">Round</span>
+												<span className="text-xl">장풍</span>
 												<WindSelect
 													forced={locState.t === 'transfer'}
 													value={hand.roundWind}
@@ -850,7 +850,7 @@ function CalculatorWithGame({
 												/>
 											</div>
 											<div className="flex flex-col justify-center items-center gap-y-1">
-												<span className="text-xl">Seat</span>
+												<span className="text-xl">장풍</span>
 												<WindSelect
 													forced={locState.t === 'transfer'}
 													value={hand.seatWind}
@@ -868,7 +868,7 @@ function CalculatorWithGame({
 										<div className="flex flex-row flex-wrap justify-center items-center gap-x-8 gap-y-1">
 											<div className="flex flex-col justify-center items-center gap-y-1">
 												<span className="text-xl">
-													Dora <span className="text-xs">Indicators</span>
+													도라 <span className="text-xs">표시패</span>
 												</span>
 												<SelectedDora
 													dora={hand.dora}
@@ -880,10 +880,11 @@ function CalculatorWithGame({
 														});
 													}}
 												/>
+												<small>누르면 삭제</small>
 											</div>
 											<div className="flex flex-col justify-center items-center gap-y-1">
 												<span className="text-xl">
-													Uradora <span className="text-xs">Indicators</span>
+													뒷도라 <span className="text-xs">표시패</span>
 												</span>
 												<SelectedDora
 													dora={hand.uradora}
@@ -895,6 +896,7 @@ function CalculatorWithGame({
 														});
 													}}
 												/>
+												<small>누르면 삭제</small>
 											</div>
 										</div>
 									</div>
@@ -914,8 +916,8 @@ function CalculatorWithGame({
 													}
 												});
 											}}
-											left="Tsumo"
-											right="Ron"
+											left="쯔모"
+											right="론"
 										/>
 										<ActionButton
 											t="dora"
@@ -923,7 +925,7 @@ function CalculatorWithGame({
 											currentAction={action}
 											onActionChange={updateAction}
 										>
-											Add Dora Indicator
+											도라표시패 추가
 										</ActionButton>
 										<ActionButton
 											t="uradora"
@@ -931,7 +933,7 @@ function CalculatorWithGame({
 											currentAction={action}
 											onActionChange={updateAction}
 										>
-											Add Uradora Indicator
+											뒷도라 표시패 추가
 										</ActionButton>
 										{isSanma && !settings.northYakuhai && (
 											<Counter
@@ -974,7 +976,7 @@ function CalculatorWithGame({
 												});
 											}}
 										>
-											Riichi
+											리치
 										</ToggleOnOff>
 										{!settings.disabledYaku.includes('ダブル立直') && (
 											<ToggleOnOff
@@ -1004,7 +1006,7 @@ function CalculatorWithGame({
 													});
 												}}
 											>
-												Double Riichi
+												더블리치
 											</ToggleOnOff>
 										)}
 										{!settings.disabledYaku.includes('一発') && (
@@ -1045,7 +1047,7 @@ function CalculatorWithGame({
 													});
 												}}
 											>
-												Ippatsu
+												일발
 											</ToggleOnOff>
 										)}
 									</HorizontalRow>
@@ -1079,7 +1081,7 @@ function CalculatorWithGame({
 													});
 												}}
 											>
-												{hand.agari === 'ron' ? 'Robbing a Kan' : 'After a Kan'}
+												{hand.agari === 'ron' ? '창깡' : '영상개화'}
 											</ToggleOnOff>
 										)}
 										{(!settings.disabledYaku.includes('海底摸月') || !settings.disabledYaku.includes('河底撈魚')) && (
@@ -1109,7 +1111,7 @@ function CalculatorWithGame({
 													});
 												}}
 											>
-												{hand.agari === 'tsumo' ? 'Under the Sea' : 'Under the River'}
+												{hand.agari === 'tsumo' ? '해저로월' : '하저로어'}
 											</ToggleOnOff>
 										)}
 										{(!settings.disabledYaku.includes('天和') || !settings.disabledYaku.includes('地和')) && (
@@ -1137,10 +1139,10 @@ function CalculatorWithGame({
 												}}
 											>
 												{hand.seatWind === '1'
-													? 'Blessing of Heaven'
+													? '천화'
 													: settings.enabledLocalYaku.includes('人和') && hand.agari === 'ron'
-													? 'Blessing of Man'
-													: 'Blessing of Earth'}
+													? '인화'
+													: '지화'}
 											</ToggleOnOff>
 										)}
 									</HorizontalRow>

@@ -62,7 +62,7 @@ export default function ScoreDisplay({
 						: 'bg-gray-50 enabled:hover:bg-gray-200 dark:bg-gray-500 dark:enabled:hover:bg-gray-600',
 				)}
 			>
-				<span className={clsx(vertical ? '[writing-mode:vertical-rl]' : '')}>Riichi</span>
+				<span className={clsx(vertical ? '[writing-mode:vertical-rl]' : '')}>리치</span>
 			</button>
 			<div
 				className={clsx(
@@ -124,6 +124,7 @@ export default function ScoreDisplay({
 				</button>
 				<div className={clsx(vertical ? 'rotate-90 mx-2 -my-2' : '', 'flex flex-col justify-center items-center')}>
 					<TileButton onClick={onTileClick} red={seatWind === '1'} tile={`${seatWind}z`}></TileButton>
+					<small>화료 ⬆︎</small>
 				</div>
 			</div>
 		</div>

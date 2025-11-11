@@ -105,18 +105,18 @@ function TileReference() {
 			<h2 className="text-xl lg:text-3xl">Winds</h2>
 			<LabeledTiles
 				tiles={[
-					['1z', 'East'],
-					['2z', 'South'],
-					['3z', 'West'],
-					['4z', 'North'],
+					['1z', '동'],
+					['2z', '남'],
+					['3z', '서'],
+					['4z', '북'],
 				]}
 			/>
 			<h2 className="text-xl lg:text-3xl">Dragons</h2>
 			<LabeledTiles
 				tiles={[
-					['5z', 'White'],
-					['6z', 'Green'],
-					['7z', 'Red'],
+					['5z', '백'],
+					['6z', '발'],
+					['7z', '중'],
 				]}
 			/>
 		</VerticalRow>

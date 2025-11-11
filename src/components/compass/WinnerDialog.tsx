@@ -53,7 +53,7 @@ export function WinnerDialog({
 	};
 
 	return (
-		<CustomDialog onClose={onClose} title="Transfer Points">
+		<CustomDialog onClose={onClose} title="화료 점수 계산">
 			<div className="flex flex-col justify-center items-center gap-y-8">
 				<form
 					className="flex flex-col justify-center items-center gap-y-2"
@@ -62,7 +62,7 @@ export function WinnerDialog({
 						submitWinner();
 					}}
 				>
-					<p className="text-xl lg:text-2xl">Point Distribution</p>
+					<p className="text-xl lg:text-2xl">점수 계산방식</p>
 					<Toggle
 						toggled={agari.t === 'ron'}
 						onToggle={(b) => {
@@ -72,12 +72,12 @@ export function WinnerDialog({
 									: { t: 'tsumo' },
 							);
 						}}
-						left="Tsumo"
-						right="Ron"
+						left="쯔모"
+						right="론"
 					/>
 					{agari.t === 'ron' && (
 						<>
-							<p className="text-xl lg:text-2xl">Dealt-In Player</p>
+							<p className="text-xl lg:text-2xl">방총 플레이어</p>
 							<HorizontalRow>
 								{(isSanma ? [0, 1, 2] : [0, 1, 2, 3])
 									.filter((i) => i !== winner)
@@ -98,10 +98,10 @@ export function WinnerDialog({
 						</>
 					)}
 					<ToggleOnOff toggled={scoreRiichiSticks} onToggle={(b) => setScoreRiichiSticks(b)}>
-						Score Riichi Sticks
+						리치봉 계산에 포함
 					</ToggleOnOff>
 					<ToggleOnOff toggled={scoreRepeatSticks} onToggle={(b) => setScoreRepeatSticks(b)}>
-						Score Repeat Sticks
+						본장 계산에 포함
 					</ToggleOnOff>
 					{settings.usePao && (
 						<>
@@ -120,11 +120,11 @@ export function WinnerDialog({
 									}
 								}}
 							>
-								Pao
+								파오
 							</ToggleOnOff>
 							{isPao && (
 								<>
-									<p className="text-xl lg:text-2xl">Responsible Player</p>
+									<p className="text-xl lg:text-2xl">책임 지불 대상 플레이어</p>
 									<HorizontalRow>
 										{(isSanma ? [0, 1, 2] : [0, 1, 2, 3])
 											.filter((i) => i !== winner && (agari.t === 'ron' ? i !== agari.dealIn : true))
@@ -141,7 +141,7 @@ export function WinnerDialog({
 							)}
 						</>
 					)}
-					<p className="text-xl lg:text-2xl">Seat Rotation</p>
+					<p className="text-xl lg:text-2xl">오야 바꾸기</p>
 					{seatWind === '1' && (
 						<ToggleOnOff
 							toggled={dealerRepeat}
@@ -153,7 +153,7 @@ export function WinnerDialog({
 								}
 							}}
 						>
-							Dealer Repeat
+							오야 유지
 						</ToggleOnOff>
 					)}
 					<ToggleOnOff
@@ -168,7 +168,7 @@ export function WinnerDialog({
 							}
 						}}
 					>
-						Rotate Seats
+						오야 바꾸기
 					</ToggleOnOff>
 				</form>
 				<Button
@@ -176,7 +176,7 @@ export function WinnerDialog({
 						void submitWinner();
 					}}
 				>
-					Calculate Hand
+					손패 점수 입력하러가기
 				</Button>
 			</div>
 		</CustomDialog>
