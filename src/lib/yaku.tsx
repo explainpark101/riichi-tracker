@@ -702,7 +702,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 	yakuRef('七対子', { inner: [ref('大数隣'), ref('大車輪'), ref('大竹林'), ref('大七星')] }),
 	// Yakuhai
 	otherRef({
-		name: 'Yakuhai (Dragons)',
+		name: '역패 (삼원패)',
 		value: 1,
 		per: true,
 		help: (
@@ -715,7 +715,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		inner: [yakuRef('小三元'), yakuRef('大三元')],
 	}),
 	otherRef({
-		name: 'Yakuhai (Winds)',
+		name: '역패 (풍패)',
 		value: 1,
 		per: true,
 		help: (
@@ -764,14 +764,14 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 	yakuRef('国士無双', { inner: [ref('国士無双十三面待ち')] }),
 	// Other yaku
 	otherRef({
-		name: 'Under the Sea, Under the River',
+		name: '해저로월, 하저로어',
 		value: 1,
 		help: <span>Win on the final draw or discard from the wall.</span>,
 	}),
 	yakuRef('嶺上開花'),
 	yakuRef('搶槓'),
 	otherRef({
-		name: 'Blessing of Heaven, Blessing of Earth',
+		name: '천화, 지화',
 		yakuman: true,
 		closedOnly: true,
 		value: 1,
@@ -779,7 +779,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		inner: [ref('人和')],
 	}),
 	otherRef({
-		name: 'Mangan at Draw',
+		name: '유국만관',
 		value: 5,
 		help: (
 			<span>
@@ -790,7 +790,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 	}),
 	// Dora
 	otherRef({
-		name: 'Dora',
+		name: '도라',
 		value: 1,
 		per: true,
 		basic: true,
@@ -810,7 +810,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		],
 	}),
 	otherRef({
-		name: 'Kita',
+		name: '북도라',
 		value: 1,
 		per: true,
 		type: 'extra',
