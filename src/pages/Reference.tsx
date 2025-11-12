@@ -218,8 +218,8 @@ function YakuItem({ yaku }: { yaku: Omit<Yaku, 'id'> }) {
 				{yaku.yakuman ? (
 					<span className="text-base lg:text-xl">
 						<H>
-							{['', 'Double', 'Triple', 'Quadruple', 'Quintuple', 'Sextuple'][yaku.value - 1] ?? `${yaku.value}x`}{' '}
-							Yakuman
+							{['', '더블', '트리플', '4배', '5배', '6배'][yaku.value - 1] ?? `${yaku.value}x`}{' '}
+							역만
 						</H>
 					</span>
 				) : (

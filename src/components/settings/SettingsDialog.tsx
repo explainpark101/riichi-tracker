@@ -334,9 +334,9 @@ export default function SettingsDialog({
 						name="역만 중첩"
 						help={
 							<span>
-								Whether to allow stacking multiple <H>yakuman</H> together or cap the max at a single <H>yakuman</H>.{' '}
+								Whether to allow stacking multiple <H>역만</H> together or cap the max at a single <H>역만</H>.{' '}
 								<br />
-								<H>Double yakuman</H> are also disabled if this is disabled.
+								<H>더블 역만</H> are also disabled if this is disabled.
 							</span>
 						}
 					>
@@ -366,7 +366,7 @@ export default function SettingsDialog({
 							name="더블역만"
 							help={
 								<span>
-									Whether to count certain special yaku as being worth a <H>double yakuman</H>. <br />
+									Whether to count certain special yaku as being worth a <H>더블 역만</H>. <br />
 									These include: <br />
 									<ul className="list-disc list-inside">
 										<li className="list-item">Big Four Winds</li>
@@ -459,7 +459,7 @@ export default function SettingsDialog({
 								</H.B>{' '}
 								or{' '}
 								<H.B>
-									<H>2</H> 부		
+									<H>2</H> 부
 								</H.B>
 								.
 							</span>
