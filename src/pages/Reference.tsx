@@ -411,7 +411,7 @@ function ScoreReference() {
 							</span>
 						}
 					>
-						<ScoreCard title={<H>역만</H>} points={yakuman} />
+						<ScoreCard title={<H>헤아림 역만</H>} points={yakuman} />
 					</ScoreSection>
 				</li>
 			</ul>
@@ -421,78 +421,77 @@ function ScoreReference() {
 					variations.
 				</li>
 				<li>
-					Scoring table in three-player is the same as four-player unless north bisection is used. In that case, points
-					that would have been lost from the north player is redistributed.
+					3인 마작과 4인 마작의 점수는 기본적으로는 같으나, 쯔모 화료 시 북가의 점수를 빼고 지불하는 룰과 북가의 점수를 두 명이 반씩 나눠서 지불하는 룰이 있다.
 				</li>
 				<li>
 					The general formula is as follows:
 					<ol className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-decimal ml-4 lg:ml-8 mt-1">
 						<li>
-							If the hand is a <H>역만</H>, score 8000 basic points per <H>역만</H>. Skip to step 8.
+							<H>역만</H>으로 화료했다면, <H>역만</H>하나당 기본 점수는 8000점 이고, step 8로 건너뛴다.
 						</li>
-						<li>Determine yaku and dora to count up the han value.</li>
+						<li>화료한 역과 포함한 도라로 판수를 계산한다.</li>
 						<li>
-							For han of <H>5</H> or more, counting fu is not necessary, skip to step 8:
+							판수가<H>5</H>판 이상이라면, 부수에 상관없이 step 8로 건너뛴다.:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
-									<H>5</H> = <H>만관</H> worth 2000 basic points.
+									<H>5</H> = <H>만관</H>은 기본점수 2000점.
 								</li>
 								<li>
-									<H>6-7</H> = <H>하네만</H> worth 3000 basic points.
+									<H>6-7</H> = <H>하네만</H>은 기본점수 3000점.
 								</li>
 								<li>
-									<H>8-10</H> = <H>배만</H> worth 4000 basic points.
+									<H>8-10</H> = <H>배만</H>은 기본점수 4000점.
 								</li>
 								<li>
-									<H>11-12</H> = <H>삼배만</H> worth 6000 basic points.
+									<H>11-12</H> = <H>삼배만</H>은 기본점수 6000점.
 								</li>
 								<li>
-									<H>13+</H> = <H>역만</H> worth 8000 basic points.
+									<H>13+</H> = <H>헤아림 역만</H>은 기본점수 8000점.
 								</li>
 							</ul>
 						</li>
 						<li>
-							부수를 결정하기 위해 패 구성을 사용하고, 가장 가까운 10으로 반올림합니다:
+							부수를 결정하기 위해 화료 형태, 대기 형태, 머리의 형태, 몸통의 형태를 사용하고, 계산된 부수는 일의 자리에서 올림한다.:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
 									<H>20</H> 기본 부수
 									<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 										<li>
-											<H>+2</H> for winning with 쯔모 (some rules may score <H>0</H> for 쯔모 after a kan)
+											<H>+2</H> 쯔모 화료했을 경우(룰에 따라 영상개화의 쯔모는 <H>0</H>부로 계산할 수도 있음)
 										</li>
 										<li>
-											<H>+10</H> for winning with 멘젠 론
+											<H>+10</H> 멘젠 론 화료했을 경우
 										</li>
 										<li>
-											<H>+2</H> for having a 단기 대기
+											<H>+2</H> 단기, 간짱, 변짱 대기로 화료했을 경우
 										</li>
 										<li>
-											<H>+2</H> per yakuhai pair (some rules may have <H>+4</H> for double wind pair)
+											<H>+2</H> 머리가 역패일 경우(룰에 따라 연풍패 머리는 <H>+4</H>부로 계산할 수도 있음)
 										</li>
 									</ul>
 								</li>
 								<li>
-									<H>+2</H> 부 per triplet
+									커쯔 하나당 <H>+2</H>부
 									<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 										<li>
-											<H>x2</H> if concealed
+											<H>x2</H> 안커 또는 안깡일 경우
 										</li>
 										<li>
-											<H>x2</H> if terminals or honors
+											<H>x2</H> 요구패일 경우
 										</li>
 										<li>
-											<H>x4</H> if 깡
+											<H>x4</H> 깡쯔일 경우
 										</li>
 									</ul>
 								</li>
 								<li>
-									치또이쯔 is always <H>25</H> 부 and not rounded.
+									치또이쯔는 항상 <H>25</H>부로 계산.
 								</li>
 								<li>
-									핑후 쯔모 is always <H>20</H> 부.
+									핑후를 포함한 쯔모는 항상 <H>20</H>부로 계산.
 								</li>
 								<li>
-									후로하면 최소 <H>30</H> 부.
+									후로하면 최소 <H>30</H>부.
 								</li>
 							</ul>
 						</li>
@@ -504,25 +503,25 @@ function ScoreReference() {
 							.
 						</li>
 						<li>
-							If using rounded <H>만관</H> rules, round 1920 basic points to 2000.
+							<H>절상만관</H>을 사용할 경우,4판 30부, 3판 60부도 기본 점수 2000점으로 계산한다.
 						</li>
 						<li>
-							If above 2000 basic points but at <H>4</H> or fewer han, fix at a <H>만관</H> of 2000 points.
+							기본 점수가 2000점 이상이지만 <H>4</H>판 이하일 경우, 기본 점수 2000점인 <H>만관</H>으로 계산한다.
 						</li>
 						<li>
-							승리 시, 가장 가까운 100으로 반올림한 점수를 줘야합니다:
+							승리 시, 10의 자리에서 올림한 점수를 지불한다.:
 							<ul className="flex flex-col justify-center items-start gap-y-1 lg:gap-y-2 list-disc ml-4 lg:ml-8 mt-1">
 								<li>
-									코 쯔모: <H>1x</H> from other 코들, <H>2x</H> from 오야.
+									코 쯔모: 타가에게서 <H>1x</H>, 오야에게는 <H>2x</H>.
 								</li>
 								<li>
-									코 론: <H>4x</H> from 방총당한 플레이어.
+									코 론: 방총자에게서 <H>4x</H>.
 								</li>
 								<li>
-									오야 쯔모: <H>2x</H> from 모든 플레이어.
+									오야 쯔모: 타가에게서 <H>2x</H>.
 								</li>
 								<li>
-									오야 론: <H>6x</H> from 방총당한 플레이어.
+									오야 론: 방총자에게서 <H>6x</H>.
 								</li>
 							</ul>
 						</li>
