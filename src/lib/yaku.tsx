@@ -43,11 +43,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
-		help: (
-			<span>
-				With thirteen orphans, win with a thirteen-sided wait. That is, your tenpai hand already has one of each
-				terminal and honor.
-			</span>
+		help: (<span>요구패 13종을 하나씩 가지고 13면대기로 국사무쌍을 화료하면 성립.</span>
 		),
 	}),
 	純正九蓮宝燈: yaku({
@@ -58,7 +54,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				With nine gates, win with a nine-sided wait. That is, your tenpai hand is exactly <H.B>1112345678999</H.B>.
+				한 종류의 수패로 <H.B>1112345678999</H.B>를 만든 상태에서 9면대기로 구련보등을 화료하면 성립.
 			</span>
 		),
 	}),
@@ -68,14 +64,14 @@ export const YakuList = {
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
-		help: <span>With four concealed triplets, win with a single-tile wait (making a pair, allowing ron).</span>,
+		help: <span>안커를 4개 모은 상태에서 단기대기로 화료하면 성립.</span>,
 	}),
 	大四喜: yaku({
 		id: '大四喜',
 		name: '대사희',
 		yakuman: true,
 		value: 2,
-		help: <span>A set of each wind.</span>,
+		help: <span>네 종류의 풍패를 모두 몸통으로 만들어 화료하면 성립.</span>,
 		example: [
 			['1z', '1z', '1z'],
 			['2z', '2z', '2z'],
@@ -93,7 +89,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
-		help: <span>Call ron before your first turn. Calls invalidate.</span>,
+		help: <span>자신의 순정 1순 쯔모 전에 론으로 화료하면 성립.</span>,
 	}),
 	国士無双: yaku({
 		id: '国士無双',
@@ -103,8 +99,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				A hand with each of the thirteen different terminal and honor tiles plus an extra terminal or honor. In some
-				rule variations, ron may be allowed on a closed kan of the winning tile.
+				모든 종류의 요구패를 모으고, 그 중 하나를 두 개 모으면 성립.
 			</span>
 		),
 		example: [['1m', '9m', '1p', '9p', '1s', '9s', '1z', '2z', '3z', '4z', '5z', '6z', '7z']],
@@ -117,7 +112,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				A hand consisting of the tiles <H.B>1112345678999</H.B> in the same suit plus an extra tile of the same suit.
+				한 종류의 수패로 1과 9를 세 개씩, 나머지 2~8패를 하나씩 모으고, 1~9중 하나를 하나 더 모으면 성립.
 			</span>
 		),
 		example: [['1p', '1p', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p', '9p', '9p']],
@@ -128,7 +123,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
-		help: <span>Four concealed triplets (not called with pon, open kan, or ron).</span>,
+		help: <span>안커 4개를 만들고 화료하면 성립.</span>,
 		example: [['1m', '1m', '2p', '2p', '2p', '3p', '3p', '3p', '4s', '4s', '4s', '1z', '1z', '1z']],
 	}),
 	小四喜: yaku({
@@ -136,7 +131,7 @@ export const YakuList = {
 		name: '소사희',
 		yakuman: true,
 		value: 1,
-		help: <span>Three sets and a pair of each wind.</span>,
+		help: <span>네 종류의 풍패 중 세 종류를 몸통으로, 나머지 한 종류의 풍패를 머리로 화료하면 성립.</span>,
 		example: [
 			['1z', '1z', '1z'],
 			['2z', '2z', '2z'],
@@ -149,7 +144,7 @@ export const YakuList = {
 		name: '대삼원',
 		yakuman: true,
 		value: 1,
-		help: <span>A set of each dragon.</span>,
+		help: <span>세 종류의 삼원패를 모두 몸통으로 만들고 화료하면 성립.</span>,
 		example: [
 			['5z', '5z', '5z'],
 			['6z', '6z', '6z'],
@@ -161,7 +156,7 @@ export const YakuList = {
 		name: '자일색',
 		yakuman: true,
 		value: 1,
-		help: <span>A hand composed entirely out of honor tiles.</span>,
+		help: <span>자패만으로 화료하면 성립.</span>,
 		example: [
 			['1z', '1z', '1z'],
 			['7z', '7z', '7z'],
@@ -174,8 +169,7 @@ export const YakuList = {
 		value: 1,
 		help: (
 			<span>
-				A hand composed using only green bamboo tiles (2, 3, 4, 6, 8) and/or the green dragon. Green dragon may be
-				required in certain rule variations.
+				삭수패 2, 3, 4, 6, 8, 발패만으로 화료하면 성립.
 			</span>
 		),
 		example: [['2s', '3s', '4s', '6s', '8s', '6z']],
@@ -185,7 +179,7 @@ export const YakuList = {
 		name: '청노두',
 		yakuman: true,
 		value: 1,
-		help: <span>A hand composed entirely out of terminal tiles.</span>,
+		help: <span> 노두패(1,9)로만 화료하면 성립.</span>,
 		example: [
 			['1m', '1m', '1m'],
 			['1p', '1p', '1p'],
@@ -197,7 +191,7 @@ export const YakuList = {
 		name: '쓰깡쯔',
 		yakuman: true,
 		value: 1,
-		help: <span>A hand containing four kans.</span>,
+		help: <span>깡을 4번 치고 화료하면 성립.</span>,
 		example: [
 			['1m', '1m'],
 			['3p', '3p', '3p', '3p'],
@@ -213,7 +207,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 2,
 		closedOnly: true,
-		help: <span>A seven pairs hand consisting of all seven of the honor tiles. Does not combine with all honors.</span>,
+		help: <span>7종류의 자패를 이용하여 치또이쯔 화료하면 성립.</span>,
 		example: [['1z', '1z', '2z', '2z', '3z', '3z', '4z', '4z', '5z', '5z', '6z', '6z', '7z', '7z']],
 	}),
 	大数隣: yaku({
@@ -223,7 +217,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
-		help: <span>A seven pairs hand consisting of 2 to 8 of characters.</span>,
+		help: <span>2~8의 만수패를 이용하여 치또이쯔 화료하면 성립.</span>,
 		example: [['2m', '2m', '3m', '3m', '4m', '4m', '5m', '5m', '6m', '6m', '7m', '7m', '8m', '8m']],
 	}),
 	大車輪: yaku({
@@ -233,7 +227,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
-		help: <span>A seven pairs hand consisting of 2 to 8 of circles.</span>,
+		help: <span>2~8의 통수패를 이용하여 치또이쯔 화료하면 성립.</span>,
 		example: [['2p', '2p', '3p', '3p', '4p', '4p', '5p', '5p', '6p', '6p', '7p', '7p', '8p', '8p']],
 	}),
 	大竹林: yaku({
@@ -243,7 +237,7 @@ export const YakuList = {
 		yakuman: true,
 		value: 1,
 		closedOnly: true,
-		help: <span>A seven pairs hand consisting of 2 to 8 of bamboo.</span>,
+		help: <span>2~8의 삭수패를 이용하여 치또이쯔 화료하면 성립.</span>,
 		example: [['2s', '2s', '3s', '3s', '4s', '4s', '5s', '5s', '6s', '6s', '7s', '7s', '8s', '8s']],
 	}),
 	紅孔雀: yaku({
@@ -252,7 +246,7 @@ export const YakuList = {
 		type: 'local',
 		yakuman: true,
 		value: 1,
-		help: <span>A hand composed using only red bamboo tiles (1, 5, 7, 9) and/or the red dragon.</span>,
+		help: <span>삭수패 1,5,7,9,중패를 이용하여 화료하면 성립.</span>,
 		example: [['1s', '5s', '7s', '9s', '7z']],
 	}),
 	黒一色: yaku({
@@ -261,7 +255,7 @@ export const YakuList = {
 		type: 'local',
 		yakuman: true,
 		value: 1,
-		help: <span>A hand composed using only black circles tiles (2, 4, 8) and/or the wind tiles.</span>,
+		help: <span>통수패 2, 4, 8과 풍패만을 이용하여 화료하면 성립.</span>,
 		example: [['2p', '4p', '8p', '1z', '2z', '3z', '4z']],
 	}),
 	百万石: yaku({
@@ -270,7 +264,7 @@ export const YakuList = {
 		type: 'local',
 		yakuman: true,
 		value: 1,
-		help: <span>A full flush hand of characters, such that the numeric values sum up to at least 100.</span>,
+		help: <span>만수패로만 화료했을 때, 그 숫자의 합이 100 이상이면 성립.</span>,
 		example: [
 			['1m', '2m', '3m', '6m', '6m', '6m', '7m', '7m'],
 			['8m', '8m', '8m', '8m'],
@@ -286,8 +280,7 @@ export const YakuList = {
 		basic: true,
 		help: (
 			<span>
-				Declare riichi with a 1000 point bet when in tenpai (one away from winning). Can no longer change your hand;
-				draws are discarded unless they are a win.
+				멘젠 텐파이 상태에서 1000점을 공탁하고 리치를 선언하면 성립.
 			</span>
 		),
 	}),
@@ -299,8 +292,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				Declare riichi with a 1000 point bet when in tenpai on your first turn. Calls invalidate. Can no longer change
-				your hand; draws are discarded unless they are a win.
+				순정 1순에 리치를 선언하면 성립.
 			</span>
 		),
 	}),
@@ -312,7 +304,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				Additional <H>1</H> han if you win before your next discard after calling riichi. Calls invalidate.
+				리치 선언 후 순정 1순 내로 화료하면 성립.
 			</span>
 		),
 	}),
@@ -321,7 +313,7 @@ export const YakuList = {
 		name: '멘젠쯔모',
 		value: 1,
 		closedOnly: true,
-		help: <span>Win with tsumo with a closed hand.</span>,
+		help: <span>멘젠 상태에서 쯔모 화료하면 성립.</span>,
 	}),
 	嶺上開花: yaku({
 		id: '嶺上開花',
@@ -330,8 +322,7 @@ export const YakuList = {
 		value: 1,
 		help: (
 			<span>
-				Win on the dead wall draw after calling kan. In three-player mahjong, a win on the dead wall draw after calling
-				kita also counts.
+				깡을 선언한 후 가져온 영상패로 쯔모 화료하면 성립.
 			</span>
 		),
 	}),
@@ -340,21 +331,21 @@ export const YakuList = {
 		name: '창깡',
 		type: 'optional',
 		value: 1,
-		help: <span>Win off a player upgrading a pon into a kan.</span>,
+		help: <span>타가가 가깡을 선언한 패로 론 화료하면 성립.</span>,
 	}),
 	海底摸月: yaku({
 		id: '海底摸月',
 		name: '해저로월',
 		type: 'optional',
 		value: 1,
-		help: <span>Win on the final draw from the wall.</span>,
+		help: <span>패산의 마지막 패로 쯔모 화료하면 성립.</span>,
 	}),
 	河底撈魚: yaku({
 		id: '河底撈魚',
 		name: '하저로어',
 		type: 'optional',
 		value: 1,
-		help: <span>Win on the final discard from the wall.</span>,
+		help: <span>마지막 버림패로 론 화료하면 성립.</span>,
 	}),
 	// 1 Han
 	場風東: yaku({ id: '場風東', name: '장풍 동', value: 1, basic: true }),
@@ -377,8 +368,7 @@ export const YakuList = {
 		closedOnly: true,
 		help: (
 			<span>
-				A hand worth <H>0</H> fu based on its composition. That is, it contains only sequences, a non-yakuhai pair (not
-				a dragon or round/seat wind), and a two-sided open wait.
+				멘젠 상태로 멘쯔 4개를 슌쯔로 만들고, 머리가 수패 혹은 객풍패인 상태에서 양면대기로 화료하면 성립.
 			</span>
 		),
 		example: [['1p'], ['2p', '3p'], ['4p']],
@@ -390,7 +380,7 @@ export const YakuList = {
 		value: 1,
 		basic: true,
 		help: (
-			<span>A hand composed of only tiles 2 through 8. This yaku may be closed only in certain rule variations.</span>
+			<span>요구패를 사용하지 않고 화료하면 성립.</span>
 		),
 		example: [['2m', '3m', '4m', '5p', '6p', '7p', '8s']],
 	}),
@@ -399,7 +389,7 @@ export const YakuList = {
 		name: '이페코',
 		value: 1,
 		closedOnly: true,
-		help: <span>A hand with two identical sequences.</span>,
+		help: <span>멘젠 상태에서 동일한 슌쯔 2개를 만들어 화료하면 성립.</span>,
 		example: [['1m', '1m', '2m', '2m', '3m', '3m']],
 	}),
 	十二落抬: yaku({
@@ -410,8 +400,7 @@ export const YakuList = {
 		basic: true,
 		help: (
 			<span>
-				A hand with four open sets (i.e. not including closed kan) waiting for a single tile to complete. Can win on
-				tsumo or ron.
+				몸통을 모두 후로하여 구성한 상태에서 단기대기로 화료하면 성립.
 			</span>
 		),
 		example: [
@@ -428,7 +417,7 @@ export const YakuList = {
 		name: '삼색동순',
 		value: 2,
 		openMinus: true,
-		help: <span>The same sequence in each suit.</span>,
+		help: <span>세 종류의 수패로 동일한 숫자로 이루어진 슌쯔를 만들면 성립.</span>,
 		example: [
 			['1m', '2m', '3m'],
 			['1p', '2p', '3p'],
@@ -442,7 +431,7 @@ export const YakuList = {
 		openMinus: true,
 		help: (
 			<span>
-				The sequences <H.B>123</H.B>, <H.B>456</H.B>, <H.B>789</H.B> in a single suit.
+				한 종류의 수패로 123, 456, 789를 몸통으로 만들어 화료하면 성립.
 			</span>
 		),
 		example: [
@@ -456,7 +445,7 @@ export const YakuList = {
 		name: '찬타',
 		value: 2,
 		openMinus: true,
-		help: <span>All tile sets in the hand contains a terminal or an honor.</span>,
+		help: <span>모든 몸통과 머리에 요구패를 포함하여 화료하면 성립.</span>,
 		example: [
 			['1p', '2p', '3p'],
 			['9p', '9p', '9p'],
@@ -471,7 +460,7 @@ export const YakuList = {
 		closedOnly: true,
 		basic: true,
 		help: (
-			<span>A hand consisting of seven pairs. An exception to the usual hand composition of four sets and a pair.</span>
+			<span>7종류의 패로 머리 7개를 만들어 화료하면 성립.</span>
 		),
 		example: [['1m', '1m', '2m', '2m', '3p', '3p', '5p', '5p', '7s', '7s', '9s', '9s', '1z', '1z']],
 	}),
@@ -480,7 +469,7 @@ export const YakuList = {
 		name: '오문제',
 		type: 'local',
 		value: 2,
-		help: <span>A hand containing all five different suits (characters, circles, bamboo, winds, and dragons).</span>,
+		help: <span>만수, 통수, 삭수, 풍패, 삼원패를 모두 이용하여 화료하면 성립.</span>,
 		example: [
 			['2m', '2m', '2m'],
 			['2p', '3p', '4p'],
@@ -494,7 +483,7 @@ export const YakuList = {
 		name: '또이또이',
 		value: 2,
 		basic: true,
-		help: <span>A hand consisting of only triplets.</span>,
+		help: <span>몸통을 모두 커쯔로 구성하여 화료하면 성립.</span>,
 		example: [
 			['1m', '1m'],
 			['2m', '2m', '2m'],
@@ -507,7 +496,7 @@ export const YakuList = {
 		id: '三色同刻',
 		name: '삼색동각',
 		value: 2,
-		help: <span>A hand containing the same triplet in each suit.</span>,
+		help: <span>세 종류의 수패로 같은 숫자의 커쯔를 만들어 화료하면 성립.</span>,
 		example: [
 			['5m', '5m', '5m'],
 			['5p', '5p', '5p'],
@@ -518,7 +507,7 @@ export const YakuList = {
 		id: '三暗刻',
 		name: '산안커',
 		value: 2,
-		help: <span>Three concealed triplets (not called with pon, open kan, or ron). Other sets may be open.</span>,
+		help: <span>안커 3개를 만들고 화료하면 성립.</span>,
 		example: [
 			['1m', '1m', '9p', '9p', '9p', '4s', '4s', '4s', '1z', '1z', '1z'],
 			['1p', '2p', '3p'],
@@ -529,7 +518,7 @@ export const YakuList = {
 		name: '삼련각',
 		type: 'local',
 		value: 2,
-		help: <span>A hand containing three triplets in the same suit where their number steps by one.</span>,
+		help: <span>한 종류의 수패로 연속된 숫자의 커쯔를 3개 만들고 화료하면 성립.</span>,
 		example: [
 			['3p', '3p', '3p'],
 			['4p', '4p', '4p'],
@@ -540,7 +529,7 @@ export const YakuList = {
 		id: '三槓子',
 		name: '산깡쯔',
 		value: 2,
-		help: <span>A hand containing three kans.</span>,
+		help: <span>깡을 세 번 치고 화료하면 성립.</span>,
 		example: [
 			['1p', '1p', '3p', '4p', '5p'],
 			['4s', '4s', '4s', '4s'],
@@ -554,7 +543,7 @@ export const YakuList = {
 		value: 2,
 		help: (
 			<span>
-				Two sets and a pair of each dragon. The <H>2</H> han from having two dragon triplets are still included.
+				세 종류의 삼원패 중 두 종류를 몸통으로, 나머지 한 종류를 머리로 하여 화료하면 성립.
 			</span>
 		),
 		example: [
@@ -567,7 +556,7 @@ export const YakuList = {
 		id: '混老頭',
 		name: '혼노두',
 		value: 2,
-		help: <span>A hand composed entirely out of terminal and honor tiles.</span>,
+		help: <span>1, 9, 자패만으로 화료하면 성립.</span>,
 		example: [
 			['1p', '1p', '1p'],
 			['9p', '9p', '9p'],
@@ -581,7 +570,7 @@ export const YakuList = {
 		type: 'local',
 		value: 3,
 		openMinus: true,
-		help: <span>A hand containing three identical sequences in the same suit.</span>,
+		help: <span>한 종류의 수패로 동일한 슌쯔를 3개 만들고 화료하면 성립.</span>,
 		example: [
 			['1p', '2p', '3p'],
 			['1p', '2p', '3p'],
@@ -593,7 +582,7 @@ export const YakuList = {
 		name: '준찬타',
 		value: 3,
 		openMinus: true,
-		help: <span>All tile sets in the hand contains a terminal.</span>,
+		help: <span>자패가 없는 상태에서 모든 몸통과 머리에 요구패를 포함하여 화료하면 성립.</span>,
 		example: [
 			['1p', '2p', '3p'],
 			['9p', '9p', '9p'],
@@ -605,7 +594,7 @@ export const YakuList = {
 		value: 3,
 		openMinus: true,
 		basic: true,
-		help: <span>A hand composed out of only one suit and honors.</span>,
+		help: <span>자패와 한 종류의 수패만으로 화료하면 성립.</span>,
 		example: [
 			['1p', '2p', '3p'],
 			['1z', '1z', '1z'],
@@ -618,7 +607,7 @@ export const YakuList = {
 		name: '량페코',
 		value: 3,
 		closedOnly: true,
-		help: <span>Two separate instances of two identical sequences. Does not combine with seven pairs.</span>,
+		help: <span>멘젠 상태에서 이페코를 두 개 만들고 화료하면 성립.</span>,
 		example: [
 			['1m', '1m', '2m', '2m', '3m', '3m'],
 			['5p', '5p', '6p', '6p', '7p', '7p'],
@@ -630,7 +619,7 @@ export const YakuList = {
 		name: '청일색',
 		value: 6,
 		openMinus: true,
-		help: <span>A hand composed out of only one suit.</span>,
+		help: <span>한 종류의 수패만으로 화료하면 성립.</span>,
 		example: [['1p', '2p', '3p']],
 	}),
 	// Dora
@@ -707,7 +696,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		per: true,
 		help: (
 			<span>
-				Any of the three dragons. Gain <H>1</H> han for each set.
+				백, 발, 중 중 한 종류를 몸통으로 만들어 화료하면 성립. <H>1</H>판.
 			</span>
 		),
 		example: [['7z', '7z', '7z']],
@@ -720,8 +709,8 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		per: true,
 		help: (
 			<span>
-				The round wind and/or the seat wind. Gain <H>1</H> han for each set. Gain <H>2</H> han if wind is both round and
-				seat wind.
+				장풍패 또는 자풍패를 몸통으로 만들어 화료하면 성립.<H>1</H>판. 장풍패와 자풍패가 동일할 경우<H>2</H>판.
+
 			</span>
 		),
 		example: [['1z', '1z', '1z']],
@@ -766,7 +755,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 	otherRef({
 		name: '해저로월, 하저로어',
 		value: 1,
-		help: <span>Win on the final draw or discard from the wall.</span>,
+		help: <span>패산의 마지막 패로 쯔모화료 하거나 마지막 버림패로 론 화료하면 성립.</span>,
 	}),
 	yakuRef('嶺上開花'),
 	yakuRef('搶槓'),
@@ -775,7 +764,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		yakuman: true,
 		closedOnly: true,
 		value: 1,
-		help: <span>Call tsumo on your first turn. Calls invalidate.</span>,
+		help: <span>자신의 순정 1순 쯔모로 화료하면 성립.</span>,
 		inner: [ref('人和')],
 	}),
 	otherRef({
@@ -783,8 +772,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		value: 5,
 		help: (
 			<span>
-				At an exhaustive draw, a <H>mangan</H> is awarded if your discards are only terminals and honors and none were
-				called by other players. This may be scored as a <H>mangan</H>, <H>5</H> han, etc. depending on rule variations.
+				황패유국 시, 자신의 버림패가 모두 요구패이고, 그것을 아무도 후로하지 않았을 때 <H>만관</H>에 해당하는 점수를 받는 것. 룰에 따라 <H>만관</H> 또는 <H>5</H>판 등으로 계산될 수 있다.
 			</span>
 		),
 	}),
@@ -797,9 +785,8 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		type: 'extra',
 		help: (
 			<span>
-				A dora indicator is flipped at the start of each hand, pointing to the dora. Another dora indicator is flipped
-				per kan. Ura dora indicators underneath are revealed on a riichi win. Red fives are also dora. Each dora in hand
-				counts as <H>1</H> han.
+				매 국 시작 시 공개되는 도라표시패의 다음 패. 뒷도라는 도라표시패 밑에 있는 뒷도라표시패의 다음 패. 리치 화료시 공개된다. 빨간색 수패(적도라) 또한 도라로 취급된다. 화료 시 각 도라는
+				<H>1</H>판으로 계산된다.
 			</span>
 		),
 		example: [
@@ -816,8 +803,7 @@ export const YakuReferenceSort: YakuReferenceItem[] = [
 		type: 'extra',
 		help: (
 			<span>
-				In three-player mahjong, north tiles that were called counts as dora. In certain rule variations, north instead
-				counts as yakuhai for every player.
+				3인 마작에서, 북빼기를 통해 패에서 제외한 북은 도라로 취급된다.
 			</span>
 		),
 		example: [['4z']],
