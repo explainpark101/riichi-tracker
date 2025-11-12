@@ -5,7 +5,7 @@ import { nextWind, TileCode } from '../../lib/hand';
 import { replicate } from '../../lib/util';
 import { useDb } from '../../providers/DbProvider';
 import Button from '../Button';
-import ToggleOnOff from '../ToggleOnOff';
+// import ToggleOnOff from '../ToggleOnOff';
 import ToggleThree from '../ToggleThree';
 import TileButton from '../calculator/TileButton';
 import CustomDialog from '../layout/CustomDialog';

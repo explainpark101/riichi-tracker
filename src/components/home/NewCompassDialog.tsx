@@ -1,3 +1,4 @@
+// import { processResult } from "immer/dist/internal.js";
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useLocalStorage from '../../hooks/useLocalStorage';
@@ -11,7 +12,6 @@ import ToggleOnOff from '../ToggleOnOff';
 import WindSelect from '../calculator/WindSelect';
 import CustomDialog from '../layout/CustomDialog';
 import SettingsDialog from '../settings/SettingsDialog';
-import { processResult } from "immer/dist/internal.js";
 
 export function NewCompassDialog({ onClose }: { onClose: () => void }) {
 	const navigate = useNavigate();
